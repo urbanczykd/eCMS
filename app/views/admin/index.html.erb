@@ -1,8 +1,5 @@
-home :]
-
-<%= @current_user.nil?%>
+zalogowany ?
   <% if current_user %>
-    <%= link_to "Edit Profile", edit_user_path(:current) %> |
     <%= link_to "Logout", logout_path %>
   <% else %>
     <%= link_to "Register", register_path %> |

@@ -13,7 +13,8 @@ ECMS::Application.routes.draw do
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
-
+  resources :user_sessions, :only =>[:new, :create, :destroy]
+  resources :users, :only => [:new, :create, :show]
   # Sample resource route with options:
   #   resources :products do
   #     member do
@@ -25,7 +26,14 @@ ECMS::Application.routes.draw do
   #       get 'sold'
   #     end
   #   end
+  match "admin", :to => "Admin#index", :as => "admin"      
+  match "login", :to => "User_sessions#new", :as => "login"
+	match "logout", :to => "User_sessions#destroy", :as => "logout"
+  match "register", :to => "Users#new", :as => "register"
+   namespace :admin do
+   end
 
+  
   # Sample resource route with sub-resources:
   #   resources :products do
   #     resources :comments, :sales

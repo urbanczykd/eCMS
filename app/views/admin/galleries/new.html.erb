@@ -1,0 +1,11 @@
+<p>new</p>
+<% form_for([:admin, @gallery], :html => { :multipart => true } ) do |f| %>
+
+<p>
+  Nazwa galerii:
+  <%= f.text_field :name %>
+</p>
+  <%= f.submit %>
+<% end %>
+
+<%= link_to "Wróć", admin_galleries_path %>

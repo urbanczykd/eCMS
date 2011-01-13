@@ -15,29 +15,35 @@
         </ul>
       </div>
       <% end %>
-  <p>
-    <b>Tytuł:</b>
-    <%= f.text_field :title %>
-  </p>
-  <p>
-    <b>Tagi:</b>
-    <%= f.text_field :tag %>
-  </p>
+    <table>
+      <tr id="none">
+        <td>
+            <b>Tytuł:</b>
+            <%= f.text_field :title %>
+        </td>
+        <td>
+            <b>Tagi:</b>
+            <%= f.text_field :tag %>
+        </td>
+      </tr>
+      <tr id="none">
+        <td>
+              <b>Publikacja:</b>
+              <%= f.select "publish", options_for_select({ "Tak" => true, "Nie" => false}) %>
+        </td>
+        <td>
+              <b>Skrót:</b>
+              <%= f.text_field :head %>
+        </td>
+      </tr>
+    </table>
 
-  <p>
-    <b>Skrót:</b>
-    <%= f.text_field :head %>
-  </p>
 
   <p>
     <b>Treść:</b>
     <%= f.text_area :body, :class => "tinymce" %>
   </p>
 
-  <p>
-    <b>Publikacja:</b>
-    <%= f.select "publish", options_for_select({ "Tak" => true, "Nie" => false}) %>
-  </p>
 
   <p>
     <%= f.submit %>

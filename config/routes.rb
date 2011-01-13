@@ -33,6 +33,9 @@ ECMS::Application.routes.draw do
    namespace :admin do
     resources :users
     resources :articles
+    resources :galleries do
+      resources :images
+    end
    end
 
   

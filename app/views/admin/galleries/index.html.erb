@@ -1,0 +1,18 @@
+<p id="title"><i>Admin Galerie</i></p>
+<table>
+  <tr id="none">
+    <td>Galeria</td>
+    <td>Nazwa</td>
+    <td colspan="3">Akcje</td>
+  </tr>
+  <% @galleries.each do |gallery| %>
+  <tr>
+    <td><%= gallery.id %></td>
+    <td><%= gallery.name %></td>
+    <td><%= link_to "Pokaż", admin_gallery_path(gallery) %></td>
+    <td><%= link_to "Edytuj", edit_admin_gallery_path(gallery) %></td>
+    <td>Usuń</td>
+  </tr>
+  <% end %>
+</table>
+<%= link_to "Dodaj Galerię", new_admin_gallery_path %>

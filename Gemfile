@@ -10,6 +10,7 @@ gem 'jquery-rails'
 #gem 'authlogic'
 gem 'authlogic', :git => 'https://github.com/odorcicd/authlogic.git', :branch => 'rails3' 
 gem 'acts_as_list'
+gem 'paperclip'
 
 # Use unicorn as the web server
 # gem 'unicorn'

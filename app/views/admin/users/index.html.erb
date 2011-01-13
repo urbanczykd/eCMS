@@ -1,0 +1,24 @@
+<p id="title"><i>Admin Users</i></p>
+<table>
+  <tr id="none">
+    <th>lp</th
+    <th>username</th>
+    <th>e-mail</th>
+    <th>last login at</th>
+    <th>last login ip</th>
+    <th colspan="3">Actions</th>
+  </tr>
+  <tr>
+  <% l = 0 %>
+  <% @users.each do |user| %>
+    <td><%= l+=1 %>.</td>
+    <td><%= user.username %></td>
+    <td><%= user.email %></td>
+    <td><%= user.last_login_at %></td>
+    <td><%= user.last_login_ip %></td>
+    <td>Show</td>
+    <td>Edit</td>
+    <td>Destroy</td>
+  <% end %>
+  </tr>
+</table>

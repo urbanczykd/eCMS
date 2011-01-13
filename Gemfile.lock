@@ -1,5 +1,5 @@
 GIT
-  remote: git://github.com/odorcicd/authlogic.git
+  remote: https://github.com/odorcicd/authlogic.git
   revision: a087ad0cba3c165ba22fcf176c28b6f7517931e8
   branch: rails3
   specs:
@@ -36,6 +36,7 @@ GEM
       activemodel (= 3.0.3)
       activesupport (= 3.0.3)
     activesupport (3.0.3)
+    acts_as_list (0.1.2)
     arel (2.0.6)
     builder (2.1.2)
     erubis (2.6.6)
@@ -80,6 +81,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  acts_as_list
   authlogic!
   jquery-rails
   mysql2

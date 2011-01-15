@@ -37,7 +37,10 @@ ECMS::Application.routes.draw do
       resources :images
     end
    end
-
+##
+#  resources :articles
+match ':id' => "Articles#show", :as => "article"
+##
   
   # Sample resource route with sub-resources:
   #   resources :products do

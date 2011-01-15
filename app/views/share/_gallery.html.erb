@@ -1,0 +1,8 @@
+<% @images = Image.all(:conditions => {:gallery_id => id.to_i}, :order => :position) %>
+
+  <% @images.each do |image| %>
+    <div style="float:left;">
+      <%= image_tag image.photo.url(:small)%>
+    </div>
+  <% end %>
+<div style="clear:both;"></div>

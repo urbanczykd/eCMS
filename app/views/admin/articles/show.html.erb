@@ -15,8 +15,9 @@
   title:
   <%= @article.title%>
 </p>
-<p>
   body:
-  <%= @article.body%>
-</p>
-<%= link_to "Wróć", admin_articles_path %>
+  <div style="border: solid 1px black;">  
+  <%= @article.body.html_safe%>
+</div>
+  
+  <%= link_to "Wróć", admin_articles_path %>

@@ -1,19 +1,26 @@
-<p id="title"><i>Edycja galerii</i></p>
+<p id="title"><i>Edycja fotografii</i></p>
 
 
 <div id="image-box" class="feathered">  
   <%= form_for([:admin, @gallery, @image], :html => {:multipart => true}) do |f| %>
     <p>
+    <%= image_tag @image.photo.url(:small)%>
       <b><i>Image to gallery/image</i></b><br />
       <%= f.file_field :photo %>
     </p>
     <p>
-      <%= f.hidden_field :gallery_id, :value => params[:id]%>
+      <%= f.hidden_field :gallery_id, :value => params[:gallery_id]%>
       Opis zdjęcia:<%= f.text_field :name %><br />
       <%= f.hidden_field :position, :value => @images.count+1 %>
     </p>
-    <p><%= f.submit "Dodaj zdjęcie"%>
-    </p>
+    <div>
+      <div style="float:left;">
+   <%= f.submit "Aktualizacja zdjęcia" %>
+      </div>
+      <div style="float:right;">
+   <%= button_to "Dodaj zdjęcie", :action => "new" %>
+      </div>
+   </div>
   <% end %>
 </div>
 

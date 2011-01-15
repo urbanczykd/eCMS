@@ -1,0 +1,11 @@
+<p>
+tytuł:
+<%= @article.title %>
+</p>
+<p>
+<%# @article.body %>
+<hr />
+<%= render_gallery(@article.body)%>
+<hr />
+</p>
+<%= link_to "Do głównej", root_path %>

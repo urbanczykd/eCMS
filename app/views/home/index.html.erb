@@ -7,3 +7,10 @@ home :]
     <%= link_to "Register", register_path %> |
     <%= link_to "Login", login_path %>
   <% end %>
+
+  <% @articles.each do |article| %>
+  <p>
+    <%= article.title %>
+    <%= link_to "zobacz go!", article_path(article)%>
+  </p>
+  <% end %>

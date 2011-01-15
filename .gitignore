@@ -5,4 +5,5 @@ tmp/**/*
 .redcar/**/*
 .redcar/**
 .redcar/tags
+public/gallery/**/*
 config/database.yml

@@ -17,6 +17,7 @@ class Admin::ArticlesController < AdminController
   end
   
   def create
+    return render :text => "params => #{params.to_yaml}"
     @article = Article.new(params[:article])
 
     respond_to do |format|

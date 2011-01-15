@@ -10,7 +10,8 @@ class Admin::GalleriesController < AdminController
   
   def edit
     @gallery = Gallery.find(params[:id])
-    @images = @gallery.images
+    @image = Image.new
+    @images = Image.all(:conditions => {:gallery_id => params[:id]}, :order => :position)
   end
   
   def create
@@ -27,12 +28,7 @@ class Admin::GalleriesController < AdminController
   def update
     @gallery = Gallery.find(params[:id])
     respond_to do |format|
-      if @gallery.update_attributes(params[:gallery][:name])
-        if params[:gallery][:image]
-#          @image = Image.new(:gallery_id => params[:id], params[:gallery][:image])
-          
-          return render :text => "tak istnieje"
-        end
+      if @gallery.update_attributes(params[:gallery])
         format.html {redirect_to admin_galleries_path }
       else
         format.html {redirect_to admin_galleries_path }
@@ -41,6 +37,11 @@ class Admin::GalleriesController < AdminController
   end
 
   def destroy
+    @gallery = Gallery.find(params[:id])
+    @gallery.destroy
+      respond_to do |format|
+        format.html {redirect_to admin_galleries_path }
+      end
   end
 
 end

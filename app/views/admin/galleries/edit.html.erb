@@ -1,13 +1,52 @@
 <p id="title"><i>Edycja galerii</i></p>
 
-<% form_for([:admin, @gallery], :html => {:multipart => true}) do |f| %>
+
+<div id="image-box" class="feathered">  
+  <%= form_for([:admin, @gallery, @image], :html => {:multipart => true}) do |f| %>
+    <p>
+      <b><i>Image to gallery/image</i></b><br />
+      <%= f.file_field :photo %>
+    </p>
+    <p>
+      <%= f.hidden_field :gallery_id, :value => params[:id]%>
+      Opis zdjęcia:<%= f.text_field :name %><br />
+      <%= f.hidden_field :position, :value => @images.count+1 %>
+    </p>
+    <p><%= f.submit %>
+    </p>
+  <% end %>
+</div>
+
+
+
+
+
+
+<%= form_for([:admin, @gallery], :html => {:multipart => true}) do |f| %>
 <p>
   Nazwa galerii:
   <%= f.text_field :name %>
 </p>
-<p>
-  <%= f.file_field :image %>
-</p>
-  <br />
-  <%= f.submit %>
+
+
+
+<div style="float:left; width: 550px; margin: 0 0 0 5px;">
+    <% @images.each do |image| %>
+    <div style="float:left; padding: 2px;">
+      <div style="width: 150px;">
+        <%= image.name %>
+      </div>
+      <%= image_tag(image.photo.url(:vsmall))%><br />
+      <%= link_to "usuń", admin_gallery_image_path(@gallery.id, image.id), :method => :delete, :confirm => "Na pewno chcesz usunąć to zdjęcie?"%>
+    </div>
+    <% end %>
+</div>
+<div style="clear:both;"></div>
+<br />
+  <%= f.submit %><br /><br />
 <% end %>
+
+<div style="clear:both;"></div>
+<br />
+<br />
+<br />

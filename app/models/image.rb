@@ -1,7 +1,8 @@
 class Image < ActiveRecord::Base
   belongs_to :gallery
+  acts_as_list :scope => :gallery
   
-  has_attached_file :photo, :styles => { :vsmall => "150x150>",
+  has_attached_file :photo, :styles => { :vsmall => "100x100>",
                                          :small => "300x300>",
                                          :oryginal => "1280x1024>"},
                   :url  => "/gallery/image/:id/:style/:basename.:extension",

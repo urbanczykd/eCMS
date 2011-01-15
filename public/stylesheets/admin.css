@@ -3,8 +3,8 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pr
 article, aside, dialog, figure, footer, header, hgroup, nav, section { display: block; }
 body { line-height: 1.5; }
 table { border-collapse: separate; border-spacing: 0; }
-caption, td { text-align: left;}
-tr:hover { background-color:#CFE2FF; }
+caption, td { text-align: center;}
+tr:hover { background-color:#CFE2FF;}
 tr#none:hover {background-color: #F5F5F5;}
 td#none:hover { background-color: #F5F5F5;}
 

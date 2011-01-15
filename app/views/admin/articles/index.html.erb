@@ -2,7 +2,7 @@
 <table>
   <tr id="none">
     <th>lp</th>
-    <th>#id</th>
+    <th>id</th>
     <th>publish</th>
     <th>title</th>
     <th colspan="3">actions</th>
@@ -11,7 +11,7 @@
   <% @articles.each do |article| %>
   <tr>
     <td><%= l+=1 %></td>
-    <td>#<%= article.id %></td>
+    <td><%= article.id %></td>
     <td><%= article.publish? %></td>
     <td><%= article.title %></td>
     <td><%= link_to("Pokaż", admin_article_path(article)) %></td>

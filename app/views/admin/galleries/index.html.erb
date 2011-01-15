@@ -2,12 +2,14 @@
 <table>
   <tr id="none">
     <td>Galeria</td>
+    <td>Link do galerii</td
     <td>Nazwa</td>
     <td colspan="2">Akcje</td>
   </tr>
   <% @galleries.each do |gallery| %>
   <tr>
     <td><%= gallery.id %></td>
+    <td><%= "{gallery=#{gallery.id}}" %></td>
     <td><%= if gallery.images.first then image_tag gallery.images.first.photo.url(:vsmall) else "" end %></td>
     <td><%= gallery.name %></td>
     <td><%= link_to "Edytuj", edit_admin_gallery_path(gallery) %></td>

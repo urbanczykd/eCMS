@@ -11,7 +11,8 @@ class Admin::GalleriesController < AdminController
   def edit
     @gallery = Gallery.find(params[:id])
     @image = Image.new
-    @images = Image.all(:conditions => {:gallery_id => params[:id]}, :order => :position)
+    @images = Image.find_images_for_gallery(params[:id])
+
   end
   
   def create

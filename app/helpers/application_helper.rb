@@ -14,15 +14,17 @@ module ApplicationHelper
   
     
   def render_gallery(content)
-      id = content.scan(/\{gallery=(\d+)\}/).flatten[0]
+    id = content.scan(/\{gallery=(\d+)\}/)
     if !id.nil?
-      partial_content = render :partial => 'share/gallery', :locals => {:id => id }
-      content.gsub! /\{gallery=\d+\}/, partial_content
+      id.each do |id|
+        partial_content = render :partial => 'share/gallery', :locals => {:id => id[0].to_i }
+        content.sub! /\{gallery=\d+\}/, partial_content
+      end
       return content.html_safe
     else
       content.gsub! /\{gallery=\d+\}/, ''
       content.html_safe
     end
-  end    
+  end  
     
 end

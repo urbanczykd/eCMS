@@ -13,4 +13,9 @@ validates_attachment_presence :photo
 validates_attachment_size :photo, :less_than => 5.megabytes
 validates_attachment_content_type :photo, :content_type => ['image/jpeg', 'image/png']
 
+
+  def self.find_images_for_gallery(params_id)
+    all(:conditions => {:gallery_id => params_id}, :order => :position)
+  end
+
 end

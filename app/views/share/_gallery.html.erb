@@ -1,4 +1,4 @@
-<% @images = Image.all(:conditions => {:gallery_id => id.to_i}, :order => :position) %>
+<% @images = Image.find_images_for_gallery(id) %>
 
   <% @images.each do |image| %>
     <div style="float:left;">

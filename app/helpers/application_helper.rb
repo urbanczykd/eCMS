@@ -1,4 +1,8 @@
 module ApplicationHelper
+    
+  def tag_content(tag)
+    content_for(:tag) { "<meta name='keywords' content='#{tag}' />".html_safe}
+  end
   
     def tab_link(name, path)
           if controller_path == "admin/images"

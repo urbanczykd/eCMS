@@ -11,5 +11,9 @@ class Article < ActiveRecord::Base
     all(:conditions => {:publish => true }, :order => :position)
   end
   
+  def self.show_like_list
+    all(:order => :position)
+  end
+  
 end
 

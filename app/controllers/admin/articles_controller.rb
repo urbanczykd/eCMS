@@ -1,7 +1,7 @@
 class Admin::ArticlesController < AdminController
 
   def index
-    @articles = Article.all
+    @articles = Article.show_like_list
   end
   
   def new
@@ -22,6 +22,7 @@ class Admin::ArticlesController < AdminController
 
     respond_to do |format|
       if @article.save
+         @article.move_to_top
 format.html { redirect_to(admin_articles_path, :notice => 'Article was successfully created.') }
         format.xml  { render :xml => @article, :status => :created, :location => @article }
       else
@@ -60,16 +61,40 @@ format.html { redirect_to(admin_articles_path, :notice => 'Article was successfu
   end
   
   ################
-  def publish
+  def act
+#  expire_page :controller => "home", :action => "index"
+
     @article = Article.find(params[:article_id])
-    respond_to do |format|
-      if @article.update_attributes(:publish => params[:publish])
-        format.html {redirect_to(admin_articles_url)}        
-      else
-        format.html {redirect_to(admin_articles_url)}
+    if (params[:art_act] == "true" || params[:art_act] == "false")
+      respond_to do |format|
+          if @article.update_attributes(:publish => params[:art_act])
+            format.html {redirect_to(admin_articles_url)}        
+          else
+            format.html {redirect_to(admin_articles_url)}
+          end
+        end 
+    elsif params[:art_act] == "up"
+      respond_to do |format|
+          if @article.move_higher
+            format.html {redirect_to(admin_articles_url)}
+          else
+            format.html {redirect_to(admin_articles_url)}
+          end
+      end
+    elsif params[:art_act] == "down"
+      respond_to do |format|
+          if @article.move_lower
+            format.html {redirect_to(admin_articles_url)}
+          else
+            format.html {redirect_to(admin_articles_url)}
+          end
       end
     end
   end
   
-  
 end
+
+
+
+
+

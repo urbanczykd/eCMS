@@ -1,23 +1,26 @@
-<p id="title"><i>Admin articles</i></p>
+<i>Admin articles</i>
+  <p style="display:inline;float:right;"<%= link_to("Dodaj Artykuł", new_admin_article_path)%>
+  </p>
 <table>
   <tr id="none">
-    <th>lp</th>
-    <th>id</th>
+    <th>#id</th>
+    <th>position</th>
     <th>publish</th>
     <th>title</th>
-    <th colspan="3">actions</th>
+    <th colspan="4">actions</th>
   </tr>
-  <% l=0 %>
   <% @articles.each do |article| %>
   <tr>
-    <td><%= l+=1 %></td>
-    <td><%= article.id %></td>
-    <td><%= link_to("#{article.publish?}", article_publish_path(article, "#{!article.publish?}")) %></td>
+    <td>#<%= article.id %></td>
+    <td><%= article.position %></td>
+    <td><%= link_to("#{article.publish?}", article_act_path(article, "#{!article.publish?}")) %></td>
     <td><%= article.title %></td>
+    <td><%= link_to("Up", article_act_path(article, "up"))%> |
+        <%= link_to("Down", article_act_path(article, "down"))%>
+    </td>
     <td><%= link_to("Pokaż", admin_article_path(article)) %></td>
     <td><%= link_to("Edytuj", edit_admin_article_path(article))%></td>
     <td><%= link_to "Usuń", [:admin, article], :confirm => 'TAK?', :method => :delete %></td>
   </tr>
   <% end %>
 </table>
-<%= link_to("Dodaj Artykuł", new_admin_article_path)%>

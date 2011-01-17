@@ -33,7 +33,7 @@ ECMS::Application.routes.draw do
    namespace :admin do
     resources :users
     resources :articles do
-      get "(/:publish)", :to => "Articles#publish", :as => "publish"
+      get "act(/:art_act)", :to => "Articles#act", :as => "act"
     end
     resources :galleries do
       resources :images

@@ -10,6 +10,7 @@ home :]
 
   <% @articles.each do |article| %>
   <p>
+  <%= article.position %>
     <%= article.title %>
     <%= link_to "zobacz go!", article_path(article)%>
   </p>

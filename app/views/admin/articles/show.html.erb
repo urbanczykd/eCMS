@@ -17,7 +17,7 @@
 </p>
   body:
   <div style="border: solid 1px black;">  
-  <%= @article.body.html_safe%>
+  <%= render_gallery(@article.body) %>
 </div>
   
   <%= link_to "Wróć", admin_articles_path %>

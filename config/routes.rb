@@ -32,7 +32,9 @@ ECMS::Application.routes.draw do
   match "register", :to => "Users#new", :as => "register"
    namespace :admin do
     resources :users
-    resources :articles
+    resources :articles do
+      get "(/:publish)", :to => "Articles#publish", :as => "publish"
+    end
     resources :galleries do
       resources :images
     end

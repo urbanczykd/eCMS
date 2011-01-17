@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
   def index
-    @articles = Article.all
+    @articles = Article.show_publish
   end
 end

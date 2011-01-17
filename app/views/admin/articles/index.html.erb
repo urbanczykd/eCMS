@@ -12,7 +12,7 @@
   <tr>
     <td><%= l+=1 %></td>
     <td><%= article.id %></td>
-    <td><%= article.publish? %></td>
+    <td><%= link_to("#{article.publish?}", article_publish_path(article, "#{!article.publish?}")) %></td>
     <td><%= article.title %></td>
     <td><%= link_to("Pokaż", admin_article_path(article)) %></td>
     <td><%= link_to("Edytuj", edit_admin_article_path(article))%></td>

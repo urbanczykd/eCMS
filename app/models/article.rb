@@ -7,6 +7,9 @@ class Article < ActiveRecord::Base
     "#{id}-#{title.parameterize}"
   end
   
+  def self.show_publish
+    all(:conditions => {:publish => true }, :order => :position)
+  end
   
 end
 

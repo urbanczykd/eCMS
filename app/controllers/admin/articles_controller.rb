@@ -59,7 +59,17 @@ format.html { redirect_to(admin_articles_path, :notice => 'Article was successfu
     end
   end
   
-  
+  ################
+  def publish
+    @article = Article.find(params[:article_id])
+    respond_to do |format|
+      if @article.update_attributes(:publish => params[:publish])
+        format.html {redirect_to(admin_articles_url)}        
+      else
+        format.html {redirect_to(admin_articles_url)}
+      end
+    end
+  end
   
   
 end

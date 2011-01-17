@@ -1,5 +1,6 @@
 class Admin::ArticlesController < AdminController
-
+  before_filter :expire_root, :except => [:index, :show]
+  before_filter :expire_all, :only => [:act] # uruchomione na stesty :)  
   def index
     @articles = Article.show_like_list
   end
@@ -35,6 +36,7 @@ format.html { redirect_to(admin_articles_path, :notice => 'Article was successfu
   # PUT /admin/article/1
   # PUT /admin/article/1.xml
   def update
+    expire_one(params[:id])
     @article = Article.find(params[:id])
 
     respond_to do |format|
@@ -51,6 +53,8 @@ format.html { redirect_to(admin_articles_path, :notice => 'Article was successfu
   # DELETE /admin/article/1
   # DELETE /admin/article/1.xml
   def destroy
+    expire_one(params[:id])
+
     @article = Article.find(params[:id])
     @article.destroy
 
@@ -61,9 +65,7 @@ format.html { redirect_to(admin_articles_path, :notice => 'Article was successfu
   end
   
   ################
-  def act
-#  expire_page :controller => "home", :action => "index"
-
+  def act 
     @article = Article.find(params[:article_id])
     if (params[:art_act] == "true" || params[:art_act] == "false")
       respond_to do |format|
@@ -91,7 +93,7 @@ format.html { redirect_to(admin_articles_path, :notice => 'Article was successfu
       end
     end
   end
-  
+
 end
 
 

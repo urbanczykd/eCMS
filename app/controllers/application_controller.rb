@@ -17,15 +17,13 @@ class ApplicationController < ActionController::Base
         expire_page "/"
   end
 
-  def expire_article_show
+  def expire_article_show # some problems with this :/
     Rails.cache.clear
-#    expire_page(:controller => 'articles', :action => 'show')
-#ok    expire_page "/3-test-3.html"
   end
   
   def expire_all
     Dir.chdir(RAILS_ROOT+"/public/")
-    Dir.glob("[1-9]-*.html").each do |file|
+    Dir.glob("*-*.html").each do |file|
      File.delete(file)
     end
   end

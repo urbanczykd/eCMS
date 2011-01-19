@@ -40,9 +40,6 @@ ECMS::Application.routes.draw do
     end
    end
 ##
-#  resources :articles
-match ':id' => "Articles#show", :as => "article"
-##
   
   # Sample resource route with sub-resources:
   #   resources :products do
@@ -67,6 +64,9 @@ match ':id' => "Articles#show", :as => "article"
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
+#  resources :articles
+   match ':id' => "Articles#show", :as => "article"
+##
    root :to => "home#index"
 
   # See how all your routes lay out with "rake routes"

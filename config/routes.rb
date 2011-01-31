@@ -31,6 +31,7 @@ ECMS::Application.routes.draw do
 	match "logout", :to => "User_sessions#destroy", :as => "logout"
   match "register", :to => "Users#new", :as => "register"
    namespace :admin do
+    resources :mmanagers
     resources :users
     resources :articles do
       get "act(/:art_act)", :to => "Articles#act", :as => "act"

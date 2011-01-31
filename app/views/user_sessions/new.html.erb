@@ -1,11 +1,13 @@
+<div style="margin: 200px auto; width: 270px; border: 1px solid black; padding: 10px;border-radius: 20px;-moz-border-radius: 5px;">
 <%= form_for @user_session do |f| %>
     <p>
-      <%= f.label :username %><br />
+      <%= f.label :login %><br />
       <%= f.text_field :username %>
     </p>
     <p>
-      <%= f.label :password %><br />
-      <%= f.text_field :password %>
+      <%= f.label :hasło %><br />
+      <%= f.password_field :password %>
     </p>
     <%= f.submit "Login" %>
 <% end %>
+</div>

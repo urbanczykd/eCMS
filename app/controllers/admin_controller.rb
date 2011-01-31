@@ -1,10 +1,12 @@
 class AdminController < ApplicationController
+  before_filter :user_account
   layout 'admin'
 
 
   def index
   end
 
+  
   private
   
   def user_account

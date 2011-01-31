@@ -1,0 +1,16 @@
+<div>
+<%= root_url+"mmanager/" %>
+</div>
+<div class="mmanager">
+  <% @dirs.each do |dir| %>
+  <div id="directory" style="width: 80px; height: 70px;border: 1px solid black; float:left;">
+      <%= dir %>
+  </div>
+  <% end %>
+
+  <% @files.each do |file| %>
+    <div id="file" style="width: 80px; height: 70px;border: 1px solid red; float:left;">
+      <%= file %>
+    </div>
+  <% end %>
+</div>

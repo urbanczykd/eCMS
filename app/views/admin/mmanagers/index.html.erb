@@ -1,16 +1,30 @@
 <div>
 <%= root_url+"mmanager/" %>
 </div>
+
+
+<%= form_for([:admin, @media], :html => { :multipart => true } ) do |f| %>
+<p>
+<%= f.file_field :upload %><br />
+<%= f.text_field :directory, :value => @mmanager_path %>
+<%= submit_tag "Upload" %>
+</p>
+<% end  %>
+
+
+
+
+
 <div class="mmanager">
   <% @dirs.each do |dir| %>
-  <div id="directory" style="width: 80px; height: 70px;border: 1px solid black; float:left;">
+  <div class="folder">
       <%= dir %>
   </div>
   <% end %>
 
   <% @files.each do |file| %>
-    <div id="file" style="width: 80px; height: 70px;border: 1px solid red; float:left;">
-      <%= file %>
+    <div class="file">
+      <%= file_ext(file).html_safe %>
     </div>
   <% end %>
 </div>

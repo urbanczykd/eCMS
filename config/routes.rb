@@ -35,8 +35,9 @@ ECMS::Application.routes.draw do
 #      get 'place' => "Mmanagers#place", :as => "place"
       resources :mmanagers do
         get 'place', :on => :collection
-#        get 'place/:dir', :action => :place, :dir => /.+/, :as => :place, :on => :collection
-#get 'place/:dir', :on => :collection, :action => :place, :as => "place"        
+        post 'create_directory', :on => :collection
+        get 'show_file', :on => :collection
+
       end
     resources :users
     resources :articles do

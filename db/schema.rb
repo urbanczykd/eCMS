@@ -13,8 +13,8 @@
 ActiveRecord::Schema.define(:version => 20110131081801) do
 
   create_table "articles", :force => true do |t|
+    t.string   "tag",        :null => false
     t.string   "title"
-    t.string   "tag"
     t.text     "head"
     t.text     "body"
     t.integer  "position"
@@ -33,7 +33,6 @@ ActiveRecord::Schema.define(:version => 20110131081801) do
   end
 
   create_table "images", :force => true do |t|
-    t.integer  "gallery_id"
     t.string   "name"
     t.integer  "position"
     t.datetime "created_at"
@@ -42,6 +41,7 @@ ActiveRecord::Schema.define(:version => 20110131081801) do
     t.string   "photo_content_type"
     t.integer  "photo_file_size"
     t.datetime "photo_updated_at"
+    t.integer  "gallery_id",         :null => false
   end
 
   create_table "mmanagers", :force => true do |t|

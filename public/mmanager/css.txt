@@ -1,0 +1,434 @@
+#INACT_1{
+  background-image: url(/images/pk/kalendarz/1_N.gif);
+  width: 22px;
+  height: 20px;
+  display: block;
+  margin: 2px;
+}
+#INACT_1:hover {
+  background-image: url(/images/pk/kalendarz/1_H.gif);
+  width: 22px;
+  height: 20px;
+  display: block;
+  margin: 2px;
+}
+#INACT_2{
+  background-image: url(/images/pk/kalendarz/2_N.gif);
+  width: 22px;
+  height: 20px;
+  display: block;
+  margin: 2px;
+}
+#INACT_2:hover {
+  background-image: url(/images/pk/kalendarz/2_H.gif);
+  width: 22px;
+  height: 20px;
+  display: block;
+  margin: 2px;
+}
+#INACT_3{
+  background-image: url(/images/pk/kalendarz/3_N.gif);
+  width: 22px;
+  height: 20px;
+  display: block;
+  margin: 2px;
+}
+#INACT_3:hover {
+  background-image: url(/images/pk/kalendarz/3_H.gif);
+  width: 22px;
+  height: 20px;
+  display: block;
+  margin: 2px;
+}
+#INACT_4{
+  background-image: url(/images/pk/kalendarz/4_N.gif);
+  width: 22px;
+  height: 20px;
+  display: block;
+  margin: 2px;
+}
+#INACT_4:hover {
+  background-image: url(/images/pk/kalendarz/4_H.gif);
+  width: 22px;
+  height: 20px;
+  display: block;
+  margin: 2px;
+}
+#INACT_5{
+  background-image: url(/images/pk/kalendarz/5_N.gif);
+  width: 22px;
+  height: 20px;
+  display: block;
+  margin: 2px;
+}
+#INACT_5:hover {
+  background-image: url(/images/pk/kalendarz/5_H.gif);
+  width: 22px;
+  height: 20px;
+  display: block;
+  margin: 2px;
+}
+#INACT_6{
+  background-image: url(/images/pk/kalendarz/6_N.gif);
+  width: 22px;
+  height: 20px;
+  display: block;
+  margin: 2px;
+}
+#INACT_6:hover {
+  background-image: url(/images/pk/kalendarz/6_H.gif);
+  width: 22px;
+  height: 20px;
+  display: block;
+  margin: 2px;
+}
+#INACT_7{
+  background-image: url(/images/pk/kalendarz/7_N.gif);
+  width: 22px;
+  height: 20px;
+  display: block;
+  margin: 2px;
+}
+#INACT_7:hover {
+  background-image: url(/images/pk/kalendarz/7_H.gif);
+  width: 22px;
+  height: 20px;
+  display: block;
+  margin: 2px;
+}
+#INACT_8{
+  background-image: url(/images/pk/kalendarz/8_N.gif);
+  width: 22px;
+  height: 20px;
+  display: block;
+  margin: 2px;
+}
+#INACT_8:hover {
+  background-image: url(/images/pk/kalendarz/8_H.gif);
+  width: 22px;
+  height: 20px;
+  display: block;
+  margin: 2px;
+}
+#INACT_9{
+  background-image: url(/images/pk/kalendarz/9_N.gif);
+  width: 22px;
+  height: 20px;
+  display: block;
+  margin: 2px;
+}
+#INACT_9:hover {
+  background-image: url(/images/pk/kalendarz/9_H.gif);
+  width: 22px;
+  height: 20px;
+  display: block;
+  margin: 2px;
+}
+#INACT_10{
+  background-image: url(/images/pk/kalendarz/10_N.gif);
+  width: 22px;
+  height: 20px;
+  display: block;
+  margin: 2px;
+}
+#INACT_10:hover {
+  background-image: url(/images/pk/kalendarz/10_H.gif);
+  width: 22px;
+  height: 20px;
+  display: block;
+  margin: 2px;
+}
+#INACT_11{
+  background-image: url(/images/pk/kalendarz/11_N.gif);
+  width: 22px;
+  height: 20px;
+  display: block;
+  margin: 2px;
+}
+#INACT_11:hover {
+  background-image: url(/images/pk/kalendarz/11_H.gif);
+  width: 22px;
+  height: 20px;
+  display: block;
+  margin: 2px;
+}
+#INACT_12{
+  background-image: url(/images/pk/kalendarz/12_N.gif);
+  width: 22px;
+  height: 20px;
+  display: block;
+  margin: 2px;
+}
+#INACT_12:hover {
+  background-image: url(/images/pk/kalendarz/12_H.gif);
+  width: 22px;
+  height: 20px;
+  display: block;
+  margin: 2px;
+}
+#INACT_13{
+  background-image: url(/images/pk/kalendarz/13_N.gif);
+  width: 22px;
+  height: 20px;
+  display: block;
+  margin: 2px;
+}
+#INACT_13:hover {
+  background-image: url(/images/pk/kalendarz/13_H.gif);
+  width: 22px;
+  height: 20px;
+  display: block;
+  margin: 2px;
+}
+#INACT_14{
+  background-image: url(/images/pk/kalendarz/14_N.gif);
+  width: 22px;
+  height: 20px;
+  display: block;
+  margin: 2px;
+}
+#INACT_14:hover {
+  background-image: url(/images/pk/kalendarz/14_H.gif);
+  width: 22px;
+  height: 20px;
+  display: block;
+  margin: 2px;
+}
+#INACT_15{
+  background-image: url(/images/pk/kalendarz/15_N.gif);
+  width: 22px;
+  height: 20px;
+  display: block;
+  margin: 2px;
+}
+#INACT_15:hover {
+  background-image: url(/images/pk/kalendarz/15_H.gif);
+  width: 22px;
+  height: 20px;
+  display: block;
+  margin: 2px;
+}
+#INACT_16{
+  background-image: url(/images/pk/kalendarz/16_N.gif);
+  width: 22px;
+  height: 20px;
+  display: block;
+  margin: 2px;
+}
+#INACT_16:hover {
+  background-image: url(/images/pk/kalendarz/16_H.gif);
+  width: 22px;
+  height: 20px;
+  display: block;
+  margin: 2px;
+}
+#INACT_17{
+  background-image: url(/images/pk/kalendarz/17_N.gif);
+  width: 22px;
+  height: 20px;
+  display: block;
+  margin: 2px;
+}
+#INACT_17:hover {
+  background-image: url(/images/pk/kalendarz/17_H.gif);
+  width: 22px;
+  height: 20px;
+  display: block;
+  margin: 2px;
+}
+#INACT_18{
+  background-image: url(/images/pk/kalendarz/18_N.gif);
+  width: 22px;
+  height: 20px;
+  display: block;
+  margin: 2px;
+}
+#INACT_18:hover {
+  background-image: url(/images/pk/kalendarz/18_H.gif);
+  width: 22px;
+  height: 20px;
+  display: block;
+  margin: 2px;
+}
+#INACT_19{
+  background-image: url(/images/pk/kalendarz/19_N.gif);
+  width: 22px;
+  height: 20px;
+  display: block;
+  margin: 2px;
+}
+#INACT_19:hover {
+  background-image: url(/images/pk/kalendarz/19_H.gif);
+  width: 22px;
+  height: 20px;
+  display: block;
+  margin: 2px;
+}
+#INACT_20{
+  background-image: url(/images/pk/kalendarz/20_N.gif);
+  width: 22px;
+  height: 20px;
+  display: block;
+  margin: 2px;
+}
+#INACT_20:hover {
+  background-image: url(/images/pk/kalendarz/20_H.gif);
+  width: 22px;
+  height: 20px;
+  display: block;
+  margin: 2px;
+}
+#INACT_21{
+  background-image: url(/images/pk/kalendarz/21_N.gif);
+  width: 22px;
+  height: 20px;
+  display: block;
+  margin: 2px;
+}
+#INACT_21:hover {
+  background-image: url(/images/pk/kalendarz/21_H.gif);
+  width: 22px;
+  height: 20px;
+  display: block;
+  margin: 2px;
+}
+#INACT_22{
+  background-image: url(/images/pk/kalendarz/22_N.gif);
+  width: 22px;
+  height: 20px;
+  display: block;
+  margin: 2px;
+}
+#INACT_22:hover {
+  background-image: url(/images/pk/kalendarz/22_H.gif);
+  width: 22px;
+  height: 20px;
+  display: block;
+  margin: 2px;
+}
+#INACT_23{
+  background-image: url(/images/pk/kalendarz/23_N.gif);
+  width: 22px;
+  height: 20px;
+  display: block;
+  margin: 2px;
+}
+#INACT_23:hover {
+  background-image: url(/images/pk/kalendarz/23_H.gif);
+  width: 22px;
+  height: 20px;
+  display: block;
+  margin: 2px;
+}
+#INACT_24{
+  background-image: url(/images/pk/kalendarz/24_N.gif);
+  width: 22px;
+  height: 20px;
+  display: block;
+  margin: 2px;
+}
+#INACT_24:hover {
+  background-image: url(/images/pk/kalendarz/24_H.gif);
+  width: 22px;
+  height: 20px;
+  display: block;
+  margin: 2px;
+}
+#INACT_25{
+  background-image: url(/images/pk/kalendarz/25_N.gif);
+  width: 22px;
+  height: 20px;
+  display: block;
+  margin: 2px;
+}
+#INACT_25:hover {
+  background-image: url(/images/pk/kalendarz/25_H.gif);
+  width: 22px;
+  height: 20px;
+  display: block;
+  margin: 2px;
+}
+#INACT_26{
+  background-image: url(/images/pk/kalendarz/26_N.gif);
+  width: 22px;
+  height: 20px;
+  display: block;
+  margin: 2px;
+}
+#INACT_26:hover {
+  background-image: url(/images/pk/kalendarz/26_H.gif);
+  width: 22px;
+  height: 20px;
+  display: block;
+  margin: 2px;
+}
+#INACT_27{
+  background-image: url(/images/pk/kalendarz/27_N.gif);
+  width: 22px;
+  height: 20px;
+  display: block;
+  margin: 2px;
+}
+#INACT_27:hover {
+  background-image: url(/images/pk/kalendarz/27_H.gif);
+  width: 22px;
+  height: 20px;
+  display: block;
+  margin: 2px;
+}
+#INACT_28{
+  background-image: url(/images/pk/kalendarz/28_N.gif);
+  width: 22px;
+  height: 20px;
+  display: block;
+  margin: 2px;
+}
+#INACT_28:hover {
+  background-image: url(/images/pk/kalendarz/28_H.gif);
+  width: 22px;
+  height: 20px;
+  display: block;
+  margin: 2px;
+}
+#INACT_29{
+  background-image: url(/images/pk/kalendarz/29_N.gif);
+  width: 22px;
+  height: 20px;
+  display: block;
+  margin: 2px;
+}
+#INACT_29:hover {
+  background-image: url(/images/pk/kalendarz/29_H.gif);
+  width: 22px;
+  height: 20px;
+  display: block;
+  margin: 2px;
+}
+#INACT_30{
+  background-image: url(/images/pk/kalendarz/30_N.gif);
+  width: 22px;
+  height: 20px;
+  display: block;
+  margin: 2px;
+}
+#INACT_30:hover {
+  background-image: url(/images/pk/kalendarz/30_H.gif);
+  width: 22px;
+  height: 20px;
+  display: block;
+  margin: 2px;
+}
+#INACT_31{
+  background-image: url(/images/pk/kalendarz/31_N.gif);
+  width: 22px;
+  height: 20px;
+  display: block;
+  margin: 2px;
+}
+#INACT_31:hover {
+  background-image: url(/images/pk/kalendarz/31_H.gif);
+  width: 22px;
+  height: 20px;
+  display: block;
+  margin: 2px;
+}

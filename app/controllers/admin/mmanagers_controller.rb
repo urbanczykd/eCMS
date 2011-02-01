@@ -1,16 +1,28 @@
 class Admin::MmanagersController < AdminController
-  before_filter :configure_app
-  before_filter :basedir_create
+#  before_filter :configure_app
+#  before_filter :basedir_create
 
-  before_filter :show_directories
-  before_filter :show_files
+#  before_filter :show_directories
+#  before_filter :show_files
   
   def index
+    configure_app
+    if !session[:path].nil?
+      @mmanager_path = session[:path]
+    end
+    show_directories
+    show_files
+
     @media = Mmanager.new
   end
   
   def create
     upload_media
+    redirect_to admin_mmanagers_path
+  end
+  
+  def place
+    session[:path] = params[:dir]
     redirect_to admin_mmanagers_path
   end
   
@@ -20,7 +32,7 @@ class Admin::MmanagersController < AdminController
   end
   ###################################  
   def configure_app
-    @mmanager_config = YAML::load(File.open("#{RAILS_ROOT}/config/mmanager.yml"))
+    @mmanager_config = YAML::load(File.open("#{RAILS_ROOT.to_s}/config/mmanager.yml"))
     @mmanager_path = @mmanager_config["path"]
     @mmanager_path = RAILS_ROOT+"/public/"+@mmanager_path
   end
@@ -53,10 +65,11 @@ class Admin::MmanagersController < AdminController
   def show_files
     @files = []
     Dir.chdir(@mmanager_path)
-    result = %x[ls -l | grep ^- | awk '{print $8}']
+    result = %x[find . ! -name . -prune -type f]
     result.each_line do |file|
-p       file.split(".")
-      @files << file
+      file = file.split(".")
+    @files << file[1].gsub("/", '')+"."+file[2].gsub(/[ ]/,'').chomp
+#   @files << file.gsub("./", '').gsub(/[ ]/, '').chomp
     end
   end
 

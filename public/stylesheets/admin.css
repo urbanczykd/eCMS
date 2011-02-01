@@ -73,18 +73,7 @@ label { font-weight: bold; cursor: pointer; }
 label.check_box { font-weight: normal; }
 fieldset { padding: 1.4em; margin: 0 0 1.5em 0; border: 1px solid #ccc; }
 legend { font-weight: bold; font-size: 1.2em; }
-/*
-  input[type=text], input[type=password], input.text, input.title, textarea, select { background-color: #fff; border: 1px solid #bbb; padding: 2px; }
-  input[type=text]:focus, input[type=password]:focus, input.text:focus, input.title:focus, textarea:focus, select:focus { border-color: #666; }
-  select { color: #333; font-size: 14px; }
-  input[type=text], input[type=password], input.text, input.title, textarea, select { margin: 0.5em 0; }
-  input.text, input.title { width: 300px; padding: 5px; }
-  input.title { font-size: 1.5em; }
-  textarea { width: 390px; height: 50px; padding: 3px; font-size: 14px; }
-  input[type=checkbox], input[type=radio], input.checkbox, input.radio { position: relative; bottom: 1px; /* top: .25em; */ }
-  form.inline { line-height: 3; }
-  form.inline p { margin-bottom: 0; }
-*/  
+
   .error, .notice, .success { padding: .8em; margin-bottom: 1em; border: 2px solid #ddd; }
   .error { background: #FBE3E4; color: #8a1f11; border-color: #FBC2C4; }
   .notice { background: #FFF6BF; color: #514721; border-color: #FFD324; }
@@ -179,24 +168,28 @@ div.blank_slate { font-weight: normal; font-size: 12px; color: #666; font-style:
 /* mmanager */
 .folder {
 background-image:url('/images/mmanager/places/folder.png');
-width: 128px; height: 128px; float:left;
+width: 80px; height: 80px; float:left;
 }
 .file{
-width: 128px; height: 128px; float:left;
+width: 80px; height: 80px; float:left;
 text-align: bottom;
 
 }
-.file #txt{ background-image:url('/images/mmanager/mimetypes/font_type1.png'); }
-.file #png{ background-image:url('/images/mmanager/mimetypes/image-png.png'); }
-.file #jpg{ background-image:url('/images/mmanager/mimetypes/image-jpg.png'); }
-.file #zip{ background-image:url('/images/mmanager/mimetypes/zip.png'); }
-.file #tar{ background-image:url('/images/mmanager/mimetypes/tar.png'); }
-.file #tgz{ background-image:url('/images/mmanager/mimetypes/tgz.png'); }
-.file #rar{ background-image:url('/images/mmanager/mimetypes/rar.png'); }
-.file #pdf{ background-image:url('/images/mmanager/mimetypes/pdf.png'); }
-#img_desc{
+.file#txt{ background-image:url('/images/mmanager/mimetypes/font_type1.png'); }
+.file#png{ background-image:url('/images/mmanager/mimetypes/image-png.png'); }
+.file#jpg{ background-image:url('/images/mmanager/mimetypes/image-jpeg.png'); }
+.file#jpeg{background-image:url('/images/mmanager/mimetypes/image-jpeg.png'); }
+.file#zip{ background-image:url('/images/mmanager/mimetypes/zip.png'); }
+.file#tar{ background-image:url('/images/mmanager/mimetypes/tar.png'); }
+.file#tgz{ background-image:url('/images/mmanager/mimetypes/tgz.png'); }
+.file#rar{ background-image:url('/images/mmanager/mimetypes/rar.png'); }
+.file#pdf{ background-image:url('/images/mmanager/mimetypes/pdf.png'); }
+.file#doc{ background-image:url('/images/mmanager/office/Word-2.png'); }
+.file#docx{ background-image:url('/images/mmanager/office/Word-2.png'); }
 
-}
+.folder#images{ background-image:url('/images/mmanager/office/folder-wallpapers.png'); }
+.desc{float:left;width: 100px; }
+#tdesc{font-size: 12px; width: 50px;}
 /* mmanager */
 
 

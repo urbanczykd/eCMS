@@ -1,8 +1,7 @@
 <div>
 <%= root_url+"mmanager/" %>
 </div>
-
-
+<%= session[:path].to_yaml %>
 <%= form_for([:admin, @media], :html => { :multipart => true } ) do |f| %>
 <p>
 <%= f.file_field :upload %><br />
@@ -11,20 +10,18 @@
 </p>
 <% end  %>
 
-
-
-
-
+<%= link_to "Home", place_admin_mmanagers_path(:dir => "/home/czacha/www/eCMS/public/mmanager/")%>
+<hr />
 <div class="mmanager">
   <% @dirs.each do |dir| %>
-  <div class="folder">
-      <%= dir %>
+  <div class="desc">
+    <%= folder(dir).html_safe %>
   </div>
   <% end %>
 
   <% @files.each do |file| %>
-    <div class="file">
+  <div class="desc">
       <%= file_ext(file).html_safe %>
-    </div>
+  </div>
   <% end %>
 </div>

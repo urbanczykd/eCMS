@@ -31,8 +31,13 @@ ECMS::Application.routes.draw do
 	match "logout", :to => "User_sessions#destroy", :as => "logout"
   match "register", :to => "Users#new", :as => "register"
    namespace :admin do
-    resources :mmanagers 
       post 'upload_media' => "Mmanagers#upload_media", :as => "upload_media"
+#      get 'place' => "Mmanagers#place", :as => "place"
+      resources :mmanagers do
+        get 'place', :on => :collection
+#        get 'place/:dir', :action => :place, :dir => /.+/, :as => :place, :on => :collection
+#get 'place/:dir', :on => :collection, :action => :place, :as => "place"        
+      end
     resources :users
     resources :articles do
       get "act(/:art_act)", :to => "Articles#act", :as => "act"

@@ -4,7 +4,6 @@ class Admin::MmanagersController < AdminController
   before_filter :show_directories
   before_filter :show_files
   before_filter :origin_path
-  attr_accessor :showfile  
 
   def index
     configure_app
@@ -32,7 +31,7 @@ class Admin::MmanagersController < AdminController
       redirect_to admin_mmanagers_path, :notice => "Katalog juz istnieje prosze wybrac inna nazwe"
     else
       Dir.chdir(params[:path])
-      Dir.mkdir(params[:dir])
+      Dir.mkdir(params[:dir].parameterize)
       redirect_to admin_mmanagers_path, :notice => "Katalog dodany"
     end
   end
@@ -40,6 +39,24 @@ class Admin::MmanagersController < AdminController
   def upload_media
     post = Mmanager.save(params[:mmanager][:upload], params[:mmanager][:directory])
   end
+
+  def del_file
+    Dir.chdir(session[:path])
+    File.delete(params[:f])
+    redirect_to admin_mmanagers_path, :notice => "Plik poprawnie usuniety"
+  end
+  
+  def del_dir
+    Dir.chdir(session[:path])
+      begin 
+        Dir.delete(params[:d])
+      rescue 
+   redirect_to admin_mmanagers_path, :notice => "Blad, katalog nie jest pusty"
+      else 
+   redirect_to admin_mmanagers_path, :notice => "Katalog usuniety"
+      end
+  end
+
   ###################################  
   def configure_app
     @mmanager_config = YAML::load(File.open("#{RAILS_ROOT.to_s}/config/mmanager.yml"))
@@ -78,8 +95,8 @@ class Admin::MmanagersController < AdminController
     Dir.chdir(@mmanager_path)
     result = %x[find . ! -name . -prune -type f]
     result.each_line do |file|
-    file = file.split(".")
-    @files << file[1].gsub("/", '')+"."+file[2].gsub(/[ ]/,'').chomp
+       file = file.split(".")
+       @files << file[1].gsub("/", '')+"."+file[2].gsub(/[ ]/,'').chomp
     end
   end
 
@@ -91,11 +108,10 @@ class Admin::MmanagersController < AdminController
   def origin_path
    @origin_path = RAILS_ROOT.to_s+"/"+session[:origin_path]+"/"
   end
-
-
-
   
 end
+
+
 
 
 

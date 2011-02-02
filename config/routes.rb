@@ -37,6 +37,8 @@ ECMS::Application.routes.draw do
         get 'place', :on => :collection
         post 'create_directory', :on => :collection
         get 'show_file', :on => :collection
+        get 'del_file', :on => :collection
+        get 'del_dir', :on => :collection
 
       end
     resources :users

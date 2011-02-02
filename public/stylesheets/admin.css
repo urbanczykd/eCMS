@@ -190,6 +190,9 @@ width: 80px; height: 80px; float:left;
 
 .folder#images{ background-image:url('/images/mmanager/places/folder-image.png'); }
 .folder#zdjecia{ background-image:url('/images/mmanager/places/folder-image.png'); }
+.folder#audio{ background-image:url('/images/mmanager/places/folder-sound.png'); }
+.folder#muzyka{ background-image:url('/images/mmanager/places/folder-sound.png'); }
+.folder#sound{ background-image:url('/images/mmanager/places/folder-sound.png'); }
 
 .mmanager{margin: 0px 0px 0px 2px;}
 .desc{float:left;width: 100px; height:130px; margin: 0px 3px; }

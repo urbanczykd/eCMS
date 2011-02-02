@@ -21,7 +21,6 @@ module Admin::MmanagersHelper
 
   def folder(dir)
     result = case dir
-
     when "images" then "<div class=\"folder\" id=\"#{dir}\">#{link_to "", del_dir_admin_mmanagers_path(:d=>dir), :id => "cancel_small"}</div><p id=\"tdesc\">#{link_to dir, place_admin_mmanagers_path(:dir => @mmanager_path+dir)}</p>"      
     when "audio" then "<div class=\"folder\" id=\"#{dir}\">#{link_to "", del_dir_admin_mmanagers_path(:d=>dir), :id => "cancel_small"}</div><p id=\"tdesc\">#{link_to dir, place_admin_mmanagers_path(:dir => @mmanager_path+dir)}</p>"      
     when "muzyka" then "<div class=\"folder\" id=\"#{dir}\">#{link_to "", del_dir_admin_mmanagers_path(:d=>dir), :id => "cancel_small"}</div><p id=\"tdesc\">#{link_to dir, place_admin_mmanagers_path(:dir => @mmanager_path+dir)}</p>"      

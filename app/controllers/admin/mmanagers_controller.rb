@@ -51,7 +51,7 @@ class Admin::MmanagersController < AdminController
         Dir.delete(params[:d])
       rescue
    redirect_to admin_mmanagers_path, :notice => "Blad, katalog nie jest pusty"
-      else
+       else
    redirect_to admin_mmanagers_path, :notice => "Katalog usuniety"
       end
   end
@@ -61,6 +61,9 @@ class Admin::MmanagersController < AdminController
     @mmanager_config = YAML::load(File.open("#{RAILS_ROOT.to_s}/config/mmanager.yml"))
     @mmanager_path = @mmanager_config["path"]
     session[:origin_path] = @mmanager_config["path"]
+      if session[:path].nil?
+        session[:path] = RAILS_ROOT.to_s+"/"+@mmanager_config["path"]
+      end
     @mmanager_path = RAILS_ROOT+"/"+@mmanager_path
 #1    return render :text => @mmanager_path 
 # @mmanager_path /home/czacha/www/eCMS/public/mmanager    
@@ -89,6 +92,7 @@ class Admin::MmanagersController < AdminController
        if dir != "\n"
         @dirs << dir.gsub("./",'').chomp
        end
+#      return render :text => @dirs.to_yaml
     end
   end
 

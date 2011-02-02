@@ -11,7 +11,7 @@
  <%= flash[:notice] %>
   
 </div>
-<div style="float:left; margin:2px 0px 0px 40px;width:480px;height: 115px;">
+<div style="float:left; margin:2px 0px 0px 40px;width:450px;height: 115px;">
   <%= form_for([:admin, @media], :html => { :multipart => true } ) do |f| %>
   <%= f.file_field :upload %><br />
   <%= f.hidden_field :directory, :value => @mmanager_path %>

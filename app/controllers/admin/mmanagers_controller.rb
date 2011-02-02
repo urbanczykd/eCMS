@@ -8,11 +8,10 @@ class Admin::MmanagersController < AdminController
   def index
     configure_app
     if !session[:path].nil?
-      @mmanager_path = session[:path]
+        @mmanager_path = session[:path]
     end
     show_directories
     show_files
-    
     @media = Mmanager.new
   end
   
@@ -48,21 +47,23 @@ class Admin::MmanagersController < AdminController
   
   def del_dir
     Dir.chdir(session[:path])
-      begin 
+      begin
         Dir.delete(params[:d])
-      rescue 
+      rescue
    redirect_to admin_mmanagers_path, :notice => "Blad, katalog nie jest pusty"
-      else 
+      else
    redirect_to admin_mmanagers_path, :notice => "Katalog usuniety"
       end
   end
 
-  ###################################  
+  ###################################
   def configure_app
     @mmanager_config = YAML::load(File.open("#{RAILS_ROOT.to_s}/config/mmanager.yml"))
     @mmanager_path = @mmanager_config["path"]
     session[:origin_path] = @mmanager_config["path"]
     @mmanager_path = RAILS_ROOT+"/"+@mmanager_path
+#1    return render :text => @mmanager_path 
+# @mmanager_path /home/czacha/www/eCMS/public/mmanager    
   end
 
   def directory_exists?(directory)
@@ -80,6 +81,7 @@ class Admin::MmanagersController < AdminController
   end
   #####################
   def show_directories
+#    @mmanager_path = "/home/czacha/www/eCMS/public/mmanager/"
     @dirs = []
     Dir.chdir(@mmanager_path)
     result = %x[find . ! -name . -prune -type d]
@@ -101,17 +103,17 @@ class Admin::MmanagersController < AdminController
   end
 
   def show_file
-    session[:show_file] = root_url + @mmanager_config["url_path"] + session[:path].gsub(@mmanager_path, '') + params[:f]
-    redirect_to admin_mmanagers_path    
+#    session[:show_file] = root_url + @mmanager_config["url_path"] + session[:path].gsub(@mmanager_path, '') + params[:f]
+    session[:show_file] = "http://localhost:3000/mmanager" +"/"+ params[:f]
+    redirect_to admin_mmanagers_path
   end
   #####################
   def origin_path
-   @origin_path = RAILS_ROOT.to_s+"/"+session[:origin_path]+"/"
+   @origin_path = RAILS_ROOT.to_s+"/"+session[:origin_path]
+#  return render :text => @origin_path
   end
   
 end
-
-
 
 
 

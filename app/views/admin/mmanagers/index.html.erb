@@ -1,5 +1,4 @@
-
-<div style="float:left; border: 1px solid black;height:115px;">
+<div style="float:left;margin: 2px;height:115px;">
 <%# session[:path].to_yaml %>
  <%= form_tag(create_directory_admin_mmanagers_path) do |f| %>  
      <%= text_field_tag :dir %>
@@ -12,27 +11,24 @@
  <%= flash[:notice] %>
   
 </div>
-<div style="float:left; border:1px solid black;width:480px;height: 115px;">
-  
+<div style="float:left; margin:2px 0px 0px 40px;width:480px;height: 115px;">
   <%= form_for([:admin, @media], :html => { :multipart => true } ) do |f| %>
-<p>
   <%= f.file_field :upload %><br />
   <%= f.hidden_field :directory, :value => @mmanager_path %>
   <%= submit_tag "Upload" %>
-</p>
 <% end  %>
 </div>
 
 <div style="clear:both;">
 
-<%= link_to "Home", place_admin_mmanagers_path(:dir => "/home/czacha/www/eCMS/public/mmanager/")%>
+<%= link_to "Home", place_admin_mmanagers_path(:dir => RAILS_ROOT.to_s+"/"+@mmanager_config["path"])%>
 <%= @mmanager_path.gsub(@origin_path, '') %>
 
 <hr />
 <div class="mmanager">
-  <% @dirs.each do |dir| %>
+<% @dirs.each do |dir| %>
   <div class="desc">
-    <%= folder(dir).html_safe %>
+  <%= folder(dir).html_safe %>
   </div>
   <% end %>
 
@@ -43,5 +39,4 @@
   <% end %>
 </div>
 <div style="clear:both;"></div>
-<hr />
 

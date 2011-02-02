@@ -2,6 +2,8 @@ tinyMCE.init({
         // General options
         mode : "textareas",
         theme : "advanced",
+        width: '925',
+        height: '800',
         plugins : "pagebreak,style,layer,table,save,advhr,advimage,advlink,emotions,iespell,inlinepopups,insertdatetime,preview,media,searchreplace,print,contextmenu,paste,directionality,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras,template",
 
         // Theme options

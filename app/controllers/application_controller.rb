@@ -35,6 +35,11 @@ class ApplicationController < ActionController::Base
     end
   end
   
+  def expire_index
+    Dir.chdir(RAILS_ROOT.to_s+"/public/")
+    File.delete("index.html")
+  end
+  
 # end cache
   
 end

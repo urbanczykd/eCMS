@@ -1,5 +1,5 @@
 class UserSessionsController < ApplicationController
-
+  before_filter :expire_index, :only => [:destroy]
 
   def new
     @user_session = UserSession.new
@@ -9,11 +9,11 @@ class UserSessionsController < ApplicationController
     @user_session = UserSession.new(params[:user_session])
       if @user_session.save
   #    flash[:notice] = "Successfully logged in."
-        #      if @user_session.user.role.name == 'user'
+  #      if @user_session.user.role.name == 'user'
   #        redirect_to root_url
   #      elsif @user_session.user.role.name == 'admin'
           redirect_to admin_path
-          #      end
+  #      end
         elsif
         render :action => 'new'
       end

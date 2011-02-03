@@ -127,12 +127,12 @@ form .secondary { padding-top: 2px; }
 
 #topbar { background-color: #005782; background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#1A719C), to(#005782)); padding-top: 3em; border-bottom: thin solid #CBD0D7; }
 #topbar-container {width: 925px; margin: 0 auto; padding-left: 3em; }
-.tabs {  margin: 0;}
+. {  margin: 0;}
 .tabs div { display: inline-block; margin-bottom: -3px; background-color: #C9CACE; -moz-border-radius: 3px 3px 0px 0px; border-radius: 3px 3px 0px 0px;}
 .tabs div:hover { background-color: #DBDCE0;}
 .tabs div.selected { border-bottom: 3px solid #f7f7f7;}
 .tabs div.selected a { background-color: #f7f7f7; color: #52A70B; border:-moz-border-radius: 3px 3px 0px 0px; border-radius: 3px 3px 0px 0px; /*border: 1px solid #CBD0D7;*/ border-bottom: none; }
-.tabs a { display: block; color: #525760; padding: .5em .8em; font-size: 0.9em; font-weight: normal;
+.tabs a { display: block; color: #525760; padding: .5em .8em; font-size: 0.9em; font-weight: normal; -moz-border-radius: 3px 3px 0px 0px; border-radius: 3px 3px 0px 0px;
 }
 .tabs a:hover {text-decoration: none; }
 #status {margin: -1em 0 0 -1em; padding: 1em; background: #F6F9FE; border-bottom: 1px solid #DADEE5; width: 891px; -webkit-border-top-left-radius: 5px;

@@ -1,5 +1,6 @@
 class Article < ActiveRecord::Base
   acts_as_list
+  belongs_to :user
 
   validates :title, :presence => true
   

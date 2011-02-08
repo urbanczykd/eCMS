@@ -6,8 +6,9 @@ class Newsletter < ActiveRecord::Base
   def deliver_now
     p "--------------------------------------"
     if self.delived_now == true then
+      p " Jestem w deliver MAIL!"
       User.all.each do |user|
-        p user.username
+        NewsletterMailer.news_mailer(user.email, self.body).deliver
       end
     else
         p "Nie JEst FALSE!"

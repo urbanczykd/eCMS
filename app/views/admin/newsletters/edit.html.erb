@@ -3,7 +3,7 @@
 <%= javascript 'tinymce/admin'%>
 
 <p>Newsletter</p>
-<% form_for([:admin, @newsletter], :html => { :multipart => true } ) do |f| %>
+<%= form_for([:admin, @newsletter], :html => { :multipart => true } ) do |f| %>
 
 <p>
   Status<br /> gotowy do wysyłki?

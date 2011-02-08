@@ -1,4 +1,14 @@
-newsletter:
-  host:
-  login:
+config:
+  web_name: localhost.pl
+  host: localhost:3000
+  
+mailer:
+  adress: smtp.gmail.com
+  port: 587
+  domain: gmail.com
+  user_name: urbanczykd
+  password: wildfireczachens
+  authentication: plain
+  enable_starttls_auto: true
+  
   

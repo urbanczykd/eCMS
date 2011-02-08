@@ -1,0 +1,38 @@
+<%= javascript 'tinymce/jquery.tinymce'%>
+<%= javascript 'tinymce/tiny_mce'%>
+<%= javascript 'tinymce/admin'%>
+
+<p>Newsletter</p>
+<% form_for([:admin, @newsletter], :html => { :multipart => true } ) do |f| %>
+
+<p>
+  Status gotowy do wysyłki?
+  <%= f.check_box :ready, :checked => false %>
+</p>
+<p>
+  Kiedy wysłać ?
+  <%= f.date_select :delived %>
+</p>
+<p>
+  Wysłać natychmiast po zapisaniu?
+  <%= f.check_box :delived_now %>
+</p>
+
+<p>
+  Wysłany:
+  <%# f.date_select :delived_when %>
+</p>
+
+<p>
+Tytuł newslettera:
+  <%= f.text_field :title %>
+</p>
+
+<p>
+  Newsletter:
+  <%= f.text_area :body %>
+</p>
+  <%= f.submit "Dodaj newsletter" %>
+<% end %>
+
+<%= link_to "Wróć", admin_newsletters_path %>

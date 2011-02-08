@@ -1,0 +1,94 @@
+class Admin::NewslettersController < AdminController
+#  before_filter :send_newsletter, :only => [:create, :update]  
+  
+  def index
+    @newsletters = Newsletter.all
+  end
+  
+  def new
+    @newsletter = Newsletter.new
+#    return render :text => "#{@newsletter.class}"
+  end
+  
+  def edit
+    @newsletter = Newsletter.find(params[:id])
+  end
+  
+  def create
+    @newsletter = Newsletter.new(params[:newsletter])
+    respond_to do |format|
+      if @newsletter.save
+        format.html {redirect_to admin_newsletters_path, :notice => "Newsletter save"}
+      else
+        format.html {redirect_to admin_newsletters_path, :notice => "save newsletter fail!"}
+      end
+    end
+  end
+
+  def update
+    @newsletter = Newsletter.find(params[:id])
+    if @newsletter.update_attributes(params[:newsletter])
+      redirect_to admin_newsletters_path, :notice => "Newsletter zaktualizowany"
+    else
+      redirect_to admin_newsletters_path, :notce => "Newsletter nie zaktualizowany!"
+    end
+  end
+  
+  def destroy
+    @newsletter = Newsletter.find(params[:id])
+    @newsletter.destroy
+    redirect_to admin_newsletters_path, :notice => "Newsletter usuniety"
+  end
+  ###################################
+  #  def send_newsletter
+  #  end
+end
+
+
+
+class AddTitleToNewsletter < ActiveRecord::Migration
+  def self.up
+    add_column :newsletters, :title, :text
+    add_column :newsletters, :sended_when, :datetime
+    add_column :newsletters, :send, :boolean, :default => 0
+  end
+
+  def self.down
+    remove_column :newsletters, :title
+    remove_column :newsletters, :sended_when
+    remove_column :newsletters, :send
+  end
+end
+
+
+
+#<%= javascript 'tinymce/jquery.tinymce'%>
+<%= javascript 'tinymce/tiny_mce'%>
+<%= javascript 'tinymce/admin'%>
+
+<p>Newsletter</p>
+<% form_for([:admin, @newsletter], :html => { :multipart => true } ) do |f| %>
+
+<p>
+  Status gotowy do wysyłki?
+  <%= f.check_box :ready, :checked => false %>
+</p>
+<p>
+  Kiedy wysłać ?
+  <%= f.date_select :when %>
+</p>
+
+<p>
+Tytuł newslettera:
+  <%= f.text_field :title %>
+</p>
+
+<p>
+  Newsletter:
+  <%= f.text_area :body %>
+</p>
+  <%= f.submit "Dodaj newsletter" %>
+<% end %>
+
+<%= link_to "Wróć", admin_newsletters_path %>
+

@@ -1,13 +1,15 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  title: 
-  body: 
-  position: 
-  status: 1
+  title: MyString
+  body: MyText
+  ready: false
+  send: false
+  sended_when: 2011-02-08 13:03:00
 
 two:
-  title: 
-  body: 
-  position: 
-  status: 1
+  title: MyString
+  body: MyText
+  ready: false
+  send: false
+  sended_when: 2011-02-08 13:03:00

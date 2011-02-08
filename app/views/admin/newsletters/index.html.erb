@@ -1,0 +1,20 @@
+<p id="title"><i>Admin Newsletter</i></p>
+<table>
+  <tr id="none">
+    <td>#id</td>
+    <td>Tytuł</td>
+    <td>Status: gotowy</td>
+    <td colspan="3">Akcje</td>
+  </tr>
+  <% @newsletters.each do |newsletter| %>
+  <tr>
+    <td><%= newsletter.id %></td>
+    <td><%= newsletter.title %></td>
+    <td><%= newsletter.ready ? "Tak" : "Nie" %></td>
+    <td><%= link_to "Pokaż", admin_newsletter_path(newsletter) %></td>
+    <td><%= link_to "Edytuj", edit_admin_newsletter_path(newsletter) %></td>
+    <td><%= link_to "Usuń", admin_newsletter_path(newsletter), :method => :delete, :confirm => "Na pewno usunac newsletter?" %></td>
+  </tr>
+  <% end %>
+</table>
+<%= link_to "Dodaj Newsletter", new_admin_newsletter_path %>

@@ -10,11 +10,11 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110203101928) do
+ActiveRecord::Schema.define(:version => 20110208120300) do
 
   create_table "articles", :force => true do |t|
-    t.string   "tag",        :null => false
     t.string   "title"
+    t.string   "tag"
     t.text     "head"
     t.text     "body"
     t.integer  "position"
@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(:version => 20110203101928) do
   end
 
   create_table "images", :force => true do |t|
+    t.integer  "gallery_id"
     t.string   "name"
     t.integer  "position"
     t.datetime "created_at"
@@ -41,7 +42,6 @@ ActiveRecord::Schema.define(:version => 20110203101928) do
     t.string   "photo_content_type"
     t.integer  "photo_file_size"
     t.datetime "photo_updated_at"
-    t.integer  "gallery_id",         :null => false
   end
 
   create_table "mmanagers", :force => true do |t|
@@ -50,6 +50,14 @@ ActiveRecord::Schema.define(:version => 20110203101928) do
   end
 
   create_table "newsletters", :force => true do |t|
+    t.string   "title"
+    t.text     "body"
+    t.boolean  "ready",        :default => false
+    t.boolean  "delived",      :default => false
+    t.datetime "delived_when"
+    t.boolean  "delived_now",  :default => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "roles", :force => true do |t|

@@ -41,6 +41,7 @@ ECMS::Application.routes.draw do
         get 'del_dir', :on => :collection
 
       end
+    resources :newsletters
     resources :users
     resources :articles do
       get "act(/:art_act)", :to => "Articles#act", :as => "act"

@@ -1,5 +1,10 @@
 home :]
 
+<%= form_for @newsuser do |f| %>
+  <%= f.text_field :email %>
+  <%= f.submit "Newsletter"%>
+<% end %>
+
 <%= @current_user.nil?%>
   <% if current_user %>
     <%= link_to "Logout", logout_path %>
@@ -15,3 +20,4 @@ home :]
     <%= link_to "zobacz go!", article_path(article)%>
   </p>
   <% end %>
+  

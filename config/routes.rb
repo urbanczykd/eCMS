@@ -15,6 +15,7 @@ ECMS::Application.routes.draw do
   #   resources :products
   resources :user_sessions, :only =>[:new, :create, :destroy]
   resources :users, :only => [:new, :create, :show]
+  resources :newsusers, :id => /.+/
   # Sample resource route with options:
   #   resources :products do
   #     member do

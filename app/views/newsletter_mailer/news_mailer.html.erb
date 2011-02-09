@@ -1,1 +1,4 @@
 <%= @mail_body.html_safe %>
+<hr />
+Aby usunąć adres z newslettera kliknij:
+<%= "<a href=\"http://localhost:3000/newsuser/#{@email}?secret=#{@secret}\">usun mail</a>" %>

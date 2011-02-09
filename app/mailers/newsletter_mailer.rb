@@ -8,6 +8,7 @@ class NewsletterMailer < ActionMailer::Base
     p "nademna body!"
     p "podemna @body"
     p @body
+    @secret = Newsuser.find_by_email(email).secret
     mail(:to => "#{@email}", :subject => "Newsletter", :from => "czacha1@gmail.com")
   end
   

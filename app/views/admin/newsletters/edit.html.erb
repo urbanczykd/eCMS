@@ -7,16 +7,14 @@
 
 <p>
   Status<br /> gotowy do wysyłki?
-  <%= f.check_box :ready, :checked => false %>
+  <%= f.check_box :ready %>
 </p>
 <p>
 Wysłać natychmiast po zapisaniu?
   <%= f.check_box :delived_now %>
 </p>
-<p>
-  Kiedy wysłać ?
-  <%= f.date_select :delived %>
-</p>
+  <!--  Kiedy wysłać ? -->
+  <%#= f.date_select :delived %>
 <p>
 Tytuł newslettera:
   <%= f.text_field :title %>

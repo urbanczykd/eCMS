@@ -4,6 +4,7 @@
     <td>#id</td>
     <td>Tytuł</td>
     <td>Status: gotowy</td>
+    <td>Wysłany?</td>
     <td colspan="3">Akcje</td>
   </tr>
   <% @newsletters.each do |newsletter| %>
@@ -11,6 +12,7 @@
     <td><%= newsletter.id %></td>
     <td><%= newsletter.title %></td>
     <td><%= newsletter.ready ? "Tak" : "Nie" %></td>
+    <td><%= newsletter.delived_when? ? "Tak #{newsletter.delived_when}" : "Nie" %></td>
     <td><%= link_to "Pokaż", admin_newsletter_path(newsletter) %></td>
     <td><%= link_to "Edytuj", edit_admin_newsletter_path(newsletter) %></td>
     <td><%= link_to "Usuń", admin_newsletter_path(newsletter), :method => :delete, :confirm => "Na pewno usunac newsletter?" %></td>

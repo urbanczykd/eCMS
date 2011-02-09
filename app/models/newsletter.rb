@@ -4,15 +4,13 @@ class Newsletter < ActiveRecord::Base
   
   private
   def deliver_now
-    p "--------------------------------------"
     if self.delived_now == true then
-      p " Jestem w deliver MAIL!"
-      User.all.each do |user|
-        NewsletterMailer.news_mailer(user.email, self.body).deliver
+      Newsuser.all.each do |user|
+        NewsletterMailer.news_mailer(user.email, self.body, self.title).deliver
+        @newsletter = Newsletter.find(self.id)
+        @newsletter.update_attributes(:delived_now => 0, :delived_when => Time.now)
+        @newsletter.save
       end
-    else
-        p "Nie JEst FALSE!"
     end
-    p "--------------------------------------"
   end
 end

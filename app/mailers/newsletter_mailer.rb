@@ -1,15 +1,12 @@
 class NewsletterMailer < ActionMailer::Base
-#  default :from => "from@example.com"
 
-  def news_mailer(email, body)
+  def news_mailer(email, body, title)
+    @app_config = YAML::load(File.open("#{RAILS_ROOT.to_s}/config/config.yml"))
     @email = email
     @mail_body = body
-    p body
-    p "nademna body!"
-    p "podemna @body"
-    p @body
+    @mail_title = title
     @secret = Newsuser.find_by_email(email).secret
-    mail(:to => "#{@email}", :subject => "Newsletter", :from => "czacha1@gmail.com")
+    mail(:to => "#{@email}", :subject => "#{@mail_title}", :from => @app_config["mailer"]["user_name"].to_s)
   end
   
 end

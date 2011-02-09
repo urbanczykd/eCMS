@@ -29,15 +29,18 @@ class ApplicationController < ActionController::Base
   end
   
   def expire_one(id)
+    Dir.chdir(RAILS_ROOT+"/public/")
     if File.exist?(id+".html")
-       Dir.chdir(RAILS_ROOT+"/public/")
        File.delete(id+".html")
     end
   end
   
   def expire_index
     Dir.chdir(RAILS_ROOT.to_s+"/public/")
-    File.delete("index.html")
+    if File.exist?("index.html")
+      File.delete("index.html")
+    end
+
   end
   
 # end cache

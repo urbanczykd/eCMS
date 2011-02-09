@@ -14,6 +14,7 @@
 </head>
 <body>
   <div class="notice"><%= flash[:notice]%></div>
+  <%= flash[:notice].nil?%>
 <%= yield %>
 
 </body>

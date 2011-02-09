@@ -1,6 +1,7 @@
 class NewsusersController < ApplicationController
 
   def create
+    expire_index
     @newsuser = Newsuser.new(params[:newsuser])
     if @newsuser.save
       redirect_to root_path, :notice => "Mail zostal poprawnie zapisany"

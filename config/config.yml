@@ -7,7 +7,7 @@ mailer:
   port: 587
   domain: gmail.com
   user_name: urbanczykd@gmail.com
-  password: wildfireczachens
+  password: xxx
   authentication: plain
   enable_starttls_auto: true
   

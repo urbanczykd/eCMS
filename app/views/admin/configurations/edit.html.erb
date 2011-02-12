@@ -1,0 +1,50 @@
+<%= form_tag @config do  %>
+<p>Nazwa strony:<br />
+  <%= text_field_tag 'dane[config][web_name]', @config["config"]["web_name"]%>
+</p>
+<p>Nazwa hosta:<br />
+  <%= text_field_tag 'dane[config][host]', @config["config"]["host"] %>
+</p>
+<hr /><i>Ustawienia Newslettera:</i>
+<p>Adres serwera SMTP:<br />
+  <%= text_field_tag 'dane[mailer][adress]', @config["mailer"]["adress"] %>
+</p>
+<p>Port serwera SMTP:<br />
+  <%= text_field_tag 'dane[mailer][port]', @config["mailer"]["port"] %>
+</p>
+<p>Domena:<br />
+  <%= text_field_tag 'dane[mailer][domain]', @config["mailer"]["domain"] %>
+</p>
+<p>Login:<br />
+  <%= text_field_tag 'dane[mailer][user_name]', @config["mailer"]["user_name"]%>
+</p>
+<p>Hasło:<br />
+  <%= text_field_tag 'dane[mailer][password]', @config["mailer"]["password"] %>
+</p>
+<p>Rodzaj autentykacji:<br />
+  <%= text_field_tag 'dane[mailer][authentication]', @config["mailer"]["authentication"] %>
+</p>
+<hr /><i>Kontakt</i><br />
+<p>Adres serwera SMTP:<br />
+  <%= text_field_tag 'dane[contact][adress]', @config["contact"]["adress"] %>
+</p>
+<p>Port serwera SMTP:<br />
+  <%= text_field_tag 'dane[contact][port]', @config["contact"]["port"] %>
+</p>
+<p>Domena:<br />
+  <%= text_field_tag 'dane[contact][domain]', @config["contact"]["domain"] %>
+</p>
+<p>Login:<br />
+  <%= text_field_tag 'dane[contact][user_name]', @config["contact"]["user_name"] %>
+</p>
+<p>Hasło:<br />
+  <%= text_field_tag 'dane[contact][password]', @config["contact"]["password"] %>
+</p>
+<p>Maile z strony wysyłaj na adres:<br />
+  <%= text_field_tag 'dane[contact][sendto]', @config["contact"]["sendto"] %>
+</p>
+
+
+
+  <%= submit_tag "Update" %>
+<% end %>

@@ -44,6 +44,9 @@ ECMS::Application.routes.draw do
       end
     resources :newsletters
     resources :users
+#    resources :configurations, :only => [:edit, :update], :id => nil
+#    get  "configurations", :to => "Configurations#edit", :as => "edit_configuration"
+#    post "configurations", :to => "Configurations#update", :as => "configuration"
     resources :articles do
       get "act(/:art_act)", :to => "Articles#act", :as => "act"
     end
@@ -51,6 +54,9 @@ ECMS::Application.routes.draw do
       resources :images
     end
    end
+    get  "admin/configurations", :to => "admin/Configurations#edit", :as => "edit_admin_configuration"
+    post "admin/configurations", :to => "admin/Configurations#update", :as => "admin_configuration"
+
 ##
   
   # Sample resource route with sub-resources:

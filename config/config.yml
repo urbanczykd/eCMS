@@ -1,14 +1,18 @@
-config:
+--- !map:ActiveSupport::HashWithIndifferentAccess 
+config: !map:ActiveSupport::HashWithIndifferentAccess 
   web_name: http://www.localhost.pl
   host: http://localhost:3000
-  
-mailer:
+mailer: !map:ActiveSupport::HashWithIndifferentAccess 
   adress: smtp.gmail.com
-  port: 587
+  port: "587"
   domain: gmail.com
   user_name: urbanczykd@gmail.com
   password: xxx
   authentication: plain
-  enable_starttls_auto: true
-  
-  
+contact: !map:ActiveSupport::HashWithIndifferentAccess 
+  adress: smtp.gmail.com
+  port: "587"
+  domain: gmail.com
+  user_name: urbanczykd@gmail.com
+  password: xxx
+  sendto: urbanczykd@gmail.com

@@ -16,8 +16,9 @@ ECMS::Application.routes.draw do
   resources :user_sessions, :only =>[:new, :create, :destroy]
   resources :users, :only => [:new, :create, :show]
   resources :newsusers, :id => /.+/
-  get "contact", :to => "Contacts#new", :as => "new_contacts"
-  post "contact", :to => "Contacs#create"
+  resources :contacts, :only => [:new, :create]
+#  get "contact", :to => "Contacts#new", :as => "new_contacts"
+#  post "contact", :to => "Contacs#create"
 
   # Sample resource route with options:
   #   resources :products do
@@ -89,7 +90,8 @@ ECMS::Application.routes.draw do
 #  resources :articles
    match ':id' => "Articles#show", :as => "article"
 ##
-   root :to => "home#index"
+
+root :to => "home#index"
 
   # See how all your routes lay out with "rake routes"
 

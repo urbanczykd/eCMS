@@ -1,5 +1,20 @@
 contacts form!
-<%= @contact.class %>
-
-<%= form_tag @contact do  %>
+<%= @contact = Contact.new %>
+<%= @contact.to_yaml%>
+<%= form_tag contacts_path, :url => {:action => :create, :controller => :contact}, :method => :post do  %>
+<p>
+  Tytuł:
+  <%= text_field_tag 'contact[title]' %>
+</p>
+<p>
+  Wiadomość:
+<%= text_field_tag 'contact[message]' %>
+</p>
+<p>
+  Twój adres email:
+  <%= text_field_tag 'contact[sender_email]' %>
+</p>
+<p>
+<%= submit_tag "Wyslij" %>
+</p>
 <% end %>

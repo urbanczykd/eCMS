@@ -16,6 +16,9 @@ ECMS::Application.routes.draw do
   resources :user_sessions, :only =>[:new, :create, :destroy]
   resources :users, :only => [:new, :create, :show]
   resources :newsusers, :id => /.+/
+  get "contact", :to => "Contacts#new", :as => "new_contacts"
+  post "contact", :to => "Contacs#create"
+
   # Sample resource route with options:
   #   resources :products do
   #     member do
@@ -56,6 +59,7 @@ ECMS::Application.routes.draw do
    end
     get  "admin/configurations", :to => "admin/Configurations#edit", :as => "edit_admin_configuration"
     post "admin/configurations", :to => "admin/Configurations#update", :as => "admin_configuration"
+    
 
 ##
   
@@ -93,3 +97,8 @@ ECMS::Application.routes.draw do
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id(.:format)))'
 end
+
+
+
+
+

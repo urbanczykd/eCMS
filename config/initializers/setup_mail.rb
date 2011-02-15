@@ -1,5 +1,6 @@
 @app_config = YAML::load(File.open("#{RAILS_ROOT.to_s}/config/config.yml"))
 
+
 ActionMailer::Base.smtp_settings = {
   :address              => @app_config["mailer"]["adress"],
   :port                 => @app_config["mailer"]["port"].to_i,

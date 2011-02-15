@@ -1,4 +1,8 @@
+<% @secret = Newsuser.find_by_email(@email_to).secret %>
+<% @stopper = "<a href=#{@app_config["config"]["host"]}/newsusers/#{@email_to}?secret=#{@secret}>Usuń mnie z newslettera!</a>" %>
+
+
 <%= @mail_body.html_safe %>
 <hr />
-Aby usunąć adres z newslettera kliknij:
-<%= "<a href='#{@app_config["config"]["host"]}/newsusers/#{@email}?secret=#{@secret}'>Usuń mnie z newslettera!</a>".html_safe %>
+Aby usunac adres z newslettera kliknij:<br />
+<%= @stopper.html_safe %>

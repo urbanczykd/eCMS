@@ -6,7 +6,7 @@ class Newsletter < ActiveRecord::Base
   def deliver_now
     if self.delived_now == true then
       Newsuser.all.each do |user|
-        NewsletterMailer.news_mailer(user.email, self.body, self.title).deliver
+        NewsletterMailer.news_mailer(user.email, self.body, self.title)
         @newsletter = Newsletter.find(self.id)
         @newsletter.update_attributes(:delived_now => 0, :delived_when => Time.now)
         @newsletter.save

@@ -1,7 +1,9 @@
 class Admin::MenusController < AdminController
   
   def index
-    @articles = Article.all
+#    @articles = Article.all
+@articles = Article.show_menu_list
+#    @articles = show_menu_list
 #    @articles = Article.show_like_menu_list
 #@articles = Article.all.group_by(&:menu)
 

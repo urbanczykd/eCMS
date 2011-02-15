@@ -21,5 +21,12 @@ class Article < ActiveRecord::Base
     all(:conditions =>{:publish => true, :menu => 1}, :order => :menu_position)
   end
   
+  
+  
+  def self.show_menu_list
+    find_by_sql "SELECT articles.id, articles.title, menus.position FROM articles JOIN menus on articles.id = menus.article_id ORDER BY menus.position"
+end
+  
+  
 end
 

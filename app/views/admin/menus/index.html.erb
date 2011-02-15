@@ -16,10 +16,10 @@
     <%# article.menu_position %>
     <td><%= if !Menu.find(:first, :conditions => {:article_id => article.id }).nil? then link_to("Tak", article_menu_path(article, "no")) else link_to("Nie", article_menu_path(article, "yes")) end  %></td>
     <%# if article.menu then link_to("Tak", article_menu_path(article, "no")) else link_to("Nie", article_menu_path(article, "yes")) end  %>
-    <td><%= link_to("#{article.publish?}", article_act_path(article, "#{!article.publish?}")) %></td>
+    <td><%= article.position %></td>
     <td><%= article.title %></td>
-    <td><%= link_to("Up", article_act_path(article, "up"))%> |
-        <%= link_to("Down", article_act_path(article, "down"))%>
+    <td><%= link_to("Up", article_menu_path(article, "up"))%> |
+        <%= link_to("Down", article_menu_path(article, "down"))%>
     </td>
     <td><%= link_to("Pokaż", admin_article_path(article)) %></td>
     <td><%= link_to("Edytuj", edit_admin_menu_path(article))%></td>

@@ -18,7 +18,6 @@ class Admin::ArticlesController < AdminController
   end
   
   def create
-#    return render :text => "params => #{params.to_yaml}"
     @article = Article.new(params[:article])
 
     respond_to do |format|
@@ -57,7 +56,10 @@ format.html { redirect_to(admin_articles_path, :notice => 'Article was successfu
 
     @article = Article.find(params[:id])
     @article.destroy
-
+    @menu = Menu.find_by_article_id(params[:id])
+    if !@menu.nil?
+      @menu.destroy
+    end
     respond_to do |format|
       format.html { redirect_to(admin_articles_url) }
       format.xml  { head :ok }
@@ -93,7 +95,8 @@ format.html { redirect_to(admin_articles_path, :notice => 'Article was successfu
       end
     elsif params[:art_act] == "yes"
       respond_to do |format|
-          if @article.update_attributes(:menu => 1)
+          @menu = Menu.new(:article_id => Article.find_by_id(params[:article_id]).id)
+          if @menu.save
             format.html {redirect_to(admin_articles_url)}
           else
             format.html {redirect_to(admin_articles_url)}
@@ -101,13 +104,12 @@ format.html { redirect_to(admin_articles_path, :notice => 'Article was successfu
       end
     elsif params[:art_act] == "no"
       respond_to do |format|
-          if @article.update_attributes(:menu => 0)
+         @menu = Menu.find(:first, :conditions => {:article_id => Article.find_by_id(params[:article_id]).id})        
+        @menu.destroy
             format.html {redirect_to(admin_articles_url)}
-          else
-            format.html {redirect_to(admin_articles_url)}
+            
           end
       end
-    end
   end
   
   def menu
@@ -129,15 +131,25 @@ format.html { redirect_to(admin_articles_path, :notice => 'Article was successfu
             format.html {redirect_to(admin_menus_url)}
       end
     elsif params[:menu_act] == "up"
+      @menu = Menu.find(:first, :conditions => {:article_id => Article.find_by_id(params[:article_id]).id})        
       respond_to do |format|
-          if @article.menu_position.move_higher
-            format.html {redirect_to(admin_articles_url)}
+          if @menu.move_higher
+            format.html {redirect_to(admin_menus_url)}
           else
-            format.html {redirect_to(admin_articles_url)}
+            format.html {redirect_to(admin_menus_url)}
           end
-    end
-    end
-    
+        end
+    elsif params[:menu_act] == "down"
+      @menu = Menu.find(:first, :conditions => {:article_id => Article.find_by_id(params[:article_id]).id})        
+      respond_to do |format|
+          if @menu.move_lower
+            format.html {redirect_to(admin_menus_url)}
+          else
+            format.html {redirect_to(admin_menus_url)}
+          end
+        
+        end
+      end    
   end
 
 end

@@ -14,7 +14,7 @@
   <tr>
     <td>#<%= article.id %></td>
     <td><%= article.position %></td>
-    <td><%= if !Menu.find(:first, :conditions => {:article_id => article.id }).nil? then link_to("Tak", article_menu_path(article, "no")) else link_to("Nie", article_menu_path(article, "yes")) end  %></td>
+    <td><%= if !Menu.find(:first, :conditions => {:article_id => article.id }).nil? then link_to("Tak", article_act_path(article, "no")) else link_to("Nie", article_act_path(article, "yes")) end  %></td>
     <td><%= link_to("#{article.publish?}", article_act_path(article, "#{!article.publish?}")) %></td>
     <td><%= article.title %></td>
     <td><%= link_to("Up", article_act_path(article, "up"))%> |

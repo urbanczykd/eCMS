@@ -1,0 +1,55 @@
+<%= javascript 'tinymce/jquery.tinymce'%>
+<%= javascript 'tinymce/tiny_mce'%>
+<%= javascript 'tinymce/admin'%>
+<p id="title"><i>Edit article</i></p>
+<p id="title"><i>Admin article new</i></p>
+<%= form_for([:admin, @article], :url => {:action => :update, :controller => "menus"}) do |f| %>
+  <% if @article.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@article.errors.count, "error") %> prohibited this article from being saved:</h2>
+    
+        <ul>
+          <% @article.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+      <% end %>
+    <table>
+      <tr id="none">
+        <td>
+            <b>Tytuł:</b>
+            <%= f.text_field :title %>
+        </td>
+        <td>
+            <b>Tagi:</b>
+            <%= f.text_field :tag %>
+        </td>
+      </tr>
+      <tr id="none">
+        <td>
+              <b>Publikacja:</b>
+              <%= f.select "publish", options_for_select({ "Tak" => true, "Nie" => false}) %>
+        </td>
+        <td>
+              <b>Skrót:</b>
+              <%= f.text_field :head %>
+        </td>
+      </tr>
+    </table>
+
+
+  <p>
+    <b>Treść:</b>
+    <%= f.text_area :body, :class => "tinymce" %>
+  </p>
+
+
+  <p>
+    <%= f.submit %>
+  </p>
+  
+<% end %>
+<p>
+<%= link_to "Powrót", admin_menus_path %>
+</p>

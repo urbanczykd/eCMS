@@ -48,11 +48,13 @@ ECMS::Application.routes.draw do
       end
     resources :newsletters
     resources :users
+    resources :menus
 #    resources :configurations, :only => [:edit, :update], :id => nil
 #    get  "configurations", :to => "Configurations#edit", :as => "edit_configuration"
 #    post "configurations", :to => "Configurations#update", :as => "configuration"
     resources :articles do
       get "act(/:art_act)", :to => "Articles#act", :as => "act"
+      get "menu(/:menu_act)", :to => "Articles#menu", :as => "menu"
     end
     resources :galleries do
       resources :images

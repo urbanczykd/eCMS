@@ -1,6 +1,7 @@
 class Article < ActiveRecord::Base
-  acts_as_list
+  acts_as_list  
   belongs_to :user
+  belongs_to :menu
 
   validates :title, :presence => true
   
@@ -14,6 +15,10 @@ class Article < ActiveRecord::Base
   
   def self.show_like_list
     all(:order => :position)
+  end
+  
+  def self.show_like_menu_list
+    all(:conditions =>{:publish => true, :menu => 1}, :order => :menu_position)
   end
   
 end

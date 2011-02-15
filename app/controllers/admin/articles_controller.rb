@@ -91,7 +91,53 @@ format.html { redirect_to(admin_articles_path, :notice => 'Article was successfu
             format.html {redirect_to(admin_articles_url)}
           end
       end
+    elsif params[:art_act] == "yes"
+      respond_to do |format|
+          if @article.update_attributes(:menu => 1)
+            format.html {redirect_to(admin_articles_url)}
+          else
+            format.html {redirect_to(admin_articles_url)}
+          end
+      end
+    elsif params[:art_act] == "no"
+      respond_to do |format|
+          if @article.update_attributes(:menu => 0)
+            format.html {redirect_to(admin_articles_url)}
+          else
+            format.html {redirect_to(admin_articles_url)}
+          end
+      end
     end
+  end
+  
+  def menu
+    @article = Article.find(params[:article_id])
+    if params[:menu_act] == "yes"    
+      @menu = Menu.new(:article_id => Article.find_by_id(params[:article_id]).id)
+      @menu.save
+      respond_to do |format|
+          if @menu.save
+            format.html {redirect_to(admin_menus_url)}
+          else
+            format.html {redirect_to(admin_menus_url)}
+          end
+      end
+    elsif params[:menu_act] == "no"
+      respond_to do |format|
+        @menu = Menu.find(:first, :conditions => {:article_id => Article.find_by_id(params[:article_id]).id})        
+        @menu.destroy
+            format.html {redirect_to(admin_menus_url)}
+      end
+    elsif params[:menu_act] == "up"
+      respond_to do |format|
+          if @article.menu_position.move_higher
+            format.html {redirect_to(admin_articles_url)}
+          else
+            format.html {redirect_to(admin_articles_url)}
+          end
+    end
+    end
+    
   end
 
 end

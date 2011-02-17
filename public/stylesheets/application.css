@@ -1,1 +1,103 @@
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, dialog, figure, footer, header, hgroup, nav, section { margin: 0; padding: 0; border: 0; font-weight: inherit; font-style: inherit; font-size: 100%; font-family: inherit; vertical-align: baseline; }
+article, aside, dialog, figure, footer, header, hgroup, nav, section { display: block; }
+body {  }
+table { border-collapse: separate; border-spacing: 0; }
+caption, td { text-align: center;}
+
+table, td, th { vertical-align: middle; }
+blockquote:before, blockquote:after, q:before, q:after { content: ""; }
+blockquote, q { quotes: "" ""; }
+a img { border: none; }
+
+body { background: #b7e0e4; font-family: "Georgia" , Arial, Helvetica, sans-serif; }
+
+/* start */
+#content_header{
+display: table; width:auto; margin: 0px auto;
+}
+
+
+#ban {
+display: table-cell;
+margin: 0px auto;
+width: 893px;
+height: 329px;
+background-image:url('/images/koziolkowo/ban.png');
+background-repeat:no-repeat;
+}
+#left_span{
+display:table-cell;
+float:right;
+margin: 0px -1px 14px 0px;
+width:195px;
+height:104px;
+background-image:url('/images/koziolkowo/zppt.png');
+background-repeat:repeat-x;
+}
+#right_span{
+display:table-cell;
+float:right;
+margin: 0px 0px 14px 0px;
+width:195px;
+height:104px;
+background-image:url('/images/koziolkowo/zlpt.png');
+background-repeat:repeat-x;
+}
+#content_box{
+/* width: 880px; */
+width: auto;
+margin: -15px auto 15px auto;
+background-image:url('/images/koziolkowo/p_element.png');
+background-repeat:repeat;
+}
+#menu{
+width:294px;
+display:inline;
+float:left;
+background-image:url('/images/koziolkowo/tlo_pod_menu.png');
+background-repeat:repeat-y;
+}
+#content{
+width: 608px;
+display:inline;
+float:left;
+background-image:url('/images/koziolkowo/content_tlo.png');
+background-repeat:repeat-y;
+}
+#content_inside{
+width: 905px;
+margin: 0px auto;
+}
+#content_footer{
+margin: 0px 0px 0px 294px;
+width: 610px;
+height: 72px;
+background-image:url('/images/koziolkowo/content_footer.png');
+background-repeat:none;
+
+}
+
+#footer {
+width: auto;
+height: 100px;
+background-image:url('/images/koziolkowo/footer_background.png');
+background-repeat:repeat-x;
+}
+
+/* end */
+
+
+
+
+
+
+/* admin login */
 #admin_login{margin: 200px auto; width: 400px; border: 1px solid black; padding: 10px;border-radius: 20px;-moz-border-radius: 5px;background-color:#BFD6FF;}
+/* end admin login */
+
+
+
+
+
+
+

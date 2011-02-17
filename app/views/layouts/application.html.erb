@@ -7,15 +7,39 @@
   <%= javascript_include_tag "jquery-ui.js" %>
   <%= javascript_include_tag "rails.js" %>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-
   <%= yield(:tag) %>
   <%= csrf_meta_tag %>
-  
 </head>
 <body>
-  <div class="notice"><%= flash[:notice]%></div>
-  <%= flash[:notice].nil?%>
-<%= yield %>
 
+
+<div id="content_header">
+  <div id="left_span"></div>
+      <div id="ban"></div>
+      <div id="right_span"></div>
+</div>
+
+  <div id="content_box">
+    <div id="content_inside">
+      <div class="notice"><%= flash[:notice]%></div>
+      <div id="menu">
+        <br />menu<br />menu1<br />menu2<br />
+      </div>
+        <div id="content">
+          <%= yield %>
+        </div>
+      <div style="clear:both;"></div>
+        <div id="content_footer"></div>
+
+    </div>
+  </div>
+
+<div id="footer"></div>
 </body>
 </html>
+
+
+
+
+
+

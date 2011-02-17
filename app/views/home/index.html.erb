@@ -1,5 +1,3 @@
-home :]
-
 <%= form_for @newsuser do |f| %>
   <%= f.text_field :email %>
   <%= f.submit "Newsletter"%>
@@ -15,8 +13,16 @@ home :]
 
   <% @articles.each do |article| %>
   <p>
-  <%= article.position %>
-    <%= article.title %>
+    <% if article.first? %>
+    <div id="first_article_title">
+      <p><%= article.title %></p>
+    </div>
+      <% else %>
+      <div id="article_title">
+        <%= article.title %>
+      </div>
+    <% end %>
+    <%= article.head %>
     <%= link_to "zobacz go!", article_path(article)%>
   </p>
   <% end %>

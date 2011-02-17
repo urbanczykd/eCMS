@@ -17,36 +17,24 @@ display: table; width:auto; margin: 0px auto;
 }
 
 
-#ban {
-display: table-cell;
-margin: 0px auto;
+#left_right_span{
+margin:0px auto;
+height:329px;
+background-image:url('/images/koziolkowo/zp.png');
+background-repeat:repeat-x;
+}
+#ban{
+margin:0px auto; 
+height:329px; 
 width: 893px;
-height: 329px;
 background-image:url('/images/koziolkowo/ban.png');
 background-repeat:no-repeat;
 }
-#left_span{
-display:table-cell;
-float:right;
-margin: 0px -1px 14px 0px;
-width:195px;
-height:104px;
-background-image:url('/images/koziolkowo/zppt.png');
-background-repeat:repeat-x;
-}
-#right_span{
-display:table-cell;
-float:right;
-margin: 0px 0px 14px 0px;
-width:195px;
-height:104px;
-background-image:url('/images/koziolkowo/zlpt.png');
-background-repeat:repeat-x;
-}
+
 #content_box{
 /* width: 880px; */
 width: auto;
-margin: -15px auto 15px auto;
+margin: -15px auto 3px auto;
 background-image:url('/images/koziolkowo/p_element.png');
 background-repeat:repeat;
 }
@@ -64,6 +52,9 @@ float:left;
 background-image:url('/images/koziolkowo/content_tlo.png');
 background-repeat:repeat-y;
 }
+#content_data{
+margin: 20px 20px -27px 20px;
+}
 #content_inside{
 width: 905px;
 margin: 0px auto;
@@ -71,18 +62,58 @@ margin: 0px auto;
 #content_footer{
 margin: 0px 0px 0px 294px;
 width: 610px;
-height: 72px;
+height: 80px;
 background-image:url('/images/koziolkowo/content_footer.png');
 background-repeat:none;
-
+}
+#content_marker{
+margin: 20px 30px 0px 0px;
+display:inline;
+float:right;
+width: 217px;
+height: 49px;
+background-image:url('../images/koziolkowo/content_picture_footer.png');
+background-repeat:none;
 }
 
 #footer {
 width: auto;
-height: 100px;
+height: 61px;
 background-image:url('/images/koziolkowo/footer_background.png');
 background-repeat:repeat-x;
 }
+#footer_content{
+margin: 0px auto;
+padding: 20px 0px 0px 0px;
+width: 894px;
+height: 41px;
+}
+#loga{
+margin: -12px 0px 0px 0px;
+display:inline;
+float:right;
+width: 521px;
+height: 43px;
+background-image:url('/images/koziolkowo/loga.png');
+background-repeat:none;
+
+}
+/* articles*/
+#first_article_title{
+width: 547px;
+height: 37px;
+background-image:url('/images/koziolkowo/title_content_marker.png');
+background-repeat:none;
+}
+#first_article_title p{
+margin: 0px 0px 0px 40px;
+color: #db1500;
+line-height: 40px;
+font-size: x-large;
+}
+#article_title{
+}
+/* end articles */
 
 /* end */
 
@@ -92,8 +123,36 @@ background-repeat:repeat-x;
 
 
 /* admin login */
-#admin_login{margin: 200px auto; width: 400px; border: 1px solid black; padding: 10px;border-radius: 20px;-moz-border-radius: 5px;background-color:#BFD6FF;}
+#admin_login{margin: 20px auto; 
+width: 400px; 
+border: 1px solid black; 
+padding: 10px;border-radius: 20px;-moz-border-radius: 5px;
+background-color:#BFD6FF;}
 /* end admin login */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

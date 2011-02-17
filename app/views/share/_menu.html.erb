@@ -1,0 +1,14 @@
+<% if @menu %>
+  <ul>
+    <li>
+    <%= link_to "Home", root_path %>
+    </li>
+    <% @menu.each do |menu| %>
+      <li>
+        <%= menu.title%>
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+<br />
+<% end %>

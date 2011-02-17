@@ -3,6 +3,8 @@ class UserSessionsController < ApplicationController
 
   def new
     @user_session = UserSession.new
+    @menu = Article.show_menu_list
+
   end
   
   def create

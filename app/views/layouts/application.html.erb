@@ -28,12 +28,13 @@
 
   <div id="content_box">
     <div id="content_inside">
-      <div class="notice"><%= flash[:notice]%></div>
       <div id="menu">
       <%= render :partial =>  "/share/menu"%>
       </div>
         <div id="content">
           <div id="content_data">
+                  <div class="notice"><%= flash[:notice]%></div>
+
             <%= yield %>
           </div>
         </div>

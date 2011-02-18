@@ -9,8 +9,8 @@ class Article < ActiveRecord::Base
     "#{id}-#{title.parameterize}"
   end
   
-  def self.show_publish
-    all(:conditions => {:publish => true }, :order => :position)
+  def self.show_publish_on_frontpage
+    all(:conditions => {:publish => true, :frontpage => true }, :order => :position)
   end
   
   def self.show_like_list

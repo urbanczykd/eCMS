@@ -69,6 +69,16 @@ format.html { redirect_to(admin_articles_path, :notice => 'Article was successfu
   ################
   def act 
     @article = Article.find(params[:article_id])
+    if (params[:art_act] == "f_yes" || params[:art_act] == "f_no")
+      if params[:art_act] == "f_no"
+        @article.update_attributes(:frontpage => true )
+        redirect_to(admin_articles_url)
+      else
+        @article.update_attributes(:frontpage => false)
+        redirect_to(admin_articles_url)
+      end
+      
+    end
     if (params[:art_act] == "true" || params[:art_act] == "false")
       respond_to do |format|
           if @article.update_attributes(:publish => params[:art_act])

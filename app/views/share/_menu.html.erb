@@ -1,13 +1,16 @@
 <% if @menu %>
   <ul>
     <li>
-    <%= link_to "Home", root_path %>
+      <p><%= link_to "Home", root_path %></p>
     </li>
     <% @menu.each do |menu| %>
       <li>
-        <%= menu.title%>
+        <p><%= link_to(menu.title, article_path(menu))%></p>
       </li>
     <% end %>
+    <li>
+      <p><%= link_to("Kontakt", new_contact_path) %></p>
+    </li>
   </ul>
 <% else %>
 <br />

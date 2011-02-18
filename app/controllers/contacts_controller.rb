@@ -1,5 +1,6 @@
 class ContactsController < ApplicationController
   def new
+    @menu = Article.show_menu_list
     @contact = Contact.new
   end
   

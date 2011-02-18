@@ -1,12 +1,9 @@
 <%= tag_content @tags %>
-<p>
-tytuł:
-<%= @article.title %><br />
-</p>
-<p>
-  
-<hr />
-<%= render_gallery(@article.body)%>
-<hr />
-</p>
-<%= link_to "Do głównej", root_path %>
+<div id="first_article_title">
+  <p><%= @article.title %></p>
+</div>
+  <%= render_gallery(@article.body) unless @article.body.nil?%><br /><br />
+<div id="go_back">
+  <%= link_to "Do głównej", root_path %>
+</div>
+<div id="article_spacer"></div>

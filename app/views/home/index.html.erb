@@ -19,11 +19,14 @@
     </div>
       <% else %>
       <div id="article_title">
-        <%= article.title %>
+        <p><%= article.title %></p>
       </div>
     <% end %>
     <%= article.head %>
-    <%= link_to "zobacz go!", article_path(article)%>
+    <div id="read_more">
+      <%= link_to "Czytaj więcej", article_path(article)%>
+    </div><br />
   </p>
+  <div id="article_spacer"></div>
   <% end %>
   

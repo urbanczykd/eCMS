@@ -8,6 +8,10 @@ class Admin::NewslettersController < AdminController
     @newsletter = Newsletter.new
   end
   
+  def show
+    @newsletter = Newsletter.find(params[:id])
+  end
+  
   def edit
     @newsletter = Newsletter.find(params[:id])
   end

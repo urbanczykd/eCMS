@@ -50,7 +50,7 @@ background-repeat:repeat;
   text-align: right;
   padding-right: 50px;
   list-style:none;
-  background-image:url('/images/koziolkowo/tlo_pod_menu.png');
+  background-image:url('/images/koziolkowo/tlo_pod_menu_1.png');
   background-repeat:repeat-y;
 }
 #menu ul a:link, ul a:visited{
@@ -64,11 +64,18 @@ background-repeat:repeat;
   text-align: right;
   padding-right: 50px;
   list-style:none;
-  background-image:url('/images/koziolkowo/tlo_pod_menu_2.png');
+  background-image:url('/images/koziolkowo/tlo_pod_menu_3.png');
   background-repeat:repeat-y;
 	text-decoration: none;
 }
-
+#dol_tla {
+float:left;
+display:block;
+width: 295px;
+height: 14px;
+  background-image:url('/images/koziolkowo/dol_tla.png');
+  background-repeat:none;
+}
 /*
 #menu{
   width:294px;

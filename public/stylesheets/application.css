@@ -178,6 +178,30 @@ background-repeat:none;
   text-decoration:none;
 }
 /* end articles */
+.notice{
+  background-color: #FFCF4F;
+  width: 550px;
+  height: 30px;
+  text-align:center;
+  line-height: 30px;
+  border: 1px solid gray;
+}
+.message{
+  background-color: #DBFFCF;
+  width: 550px;
+  height: 30px;
+  text-align:center;
+  line-height: 30px;
+  border: 1px solid gray;
+}
+.error{
+  background-color: #FF4F4F;
+  width: 550px;
+  height: 30px;
+  text-align:center;
+  line-height: 30px;
+  border: 1px solid gray;
+}
 
 /* end */
 

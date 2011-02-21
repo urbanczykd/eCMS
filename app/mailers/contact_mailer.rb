@@ -7,5 +7,4 @@ class ContactMailer < ActionMailer::Base
     @mail_title = title
     mail(:to => @email_from, :subject => "#{@mail_title}", :from => @email_from, :content_type => 'text/html').deliver
   end
-  
 end

@@ -35,9 +35,15 @@
       
         <div id="content">
           <div id="content_data">
+          <% if !flash[:notice].nil? %>
                   <div class="notice"><%= flash[:notice]%></div>
+          <% end %>
+          <% if !flash[:error].nil? %>
                   <div class="error"><%= flash[:error]%></div>
+          <% end %>
+          <% if !flash[:message].nil? %>
                   <div class="message"><%= flash[:message]%></div>
+         <% end %>
 
             <%= yield %>
 

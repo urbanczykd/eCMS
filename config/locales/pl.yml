@@ -1,0 +1,13 @@
+pl:
+  contact:
+    email_fail: "Adres email nie jest prawidłowy."
+    title_fail: "Tutuł musi zostać poprawnie wypełniony."
+    message_fail: "Treść wiadomości musi zostać wypełniona."
+    sender_fail: "Brak adresu zwrotnego, proszę uzupełnić."
+    valid_sender_fail: "Adres zwrotny nie przypomina adresu e-mail."
+    message_success: "Wiadomość została poprawnie wysłana."
+    message_fail: "Wiadomość nie została poprawnie wysłana, proszę o kontakt z administratorem."
+  newsletter:
+    mail_success: "Mail został poprawnie wysłany."
+    mail_save_fail: "Mail nie został poprawnie zapisany."
+    mail_delete: "Mail poprawnie usunięty z bazy."

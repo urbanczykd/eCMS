@@ -17,6 +17,7 @@ ECMS::Application.routes.draw do
   resources :users, :only => [:new, :create, :show]
   resources :newsusers, :id => /.+/
   resources :contacts, :only => [:new, :create]
+
 #  get "contact", :to => "Contacts#new", :as => "new_contacts"
 #  post "contact", :to => "Contacs#create"
 

@@ -36,16 +36,17 @@
         <div id="content">
           <div id="content_data">
                   <div class="notice"><%= flash[:notice]%></div>
+                  <div class="error"><%= flash[:error]%></div>
+                  <div class="message"><%= flash[:message]%></div>
 
             <%= yield %>
+
+                  <div id="content_footer">
+                    <div id="content_marker"></div>
+                  </div>
           </div>
         </div>
-      <div style="clear:both;"></div>
-      <div id="content_footer">
-        <div id="content_marker">
-        </div>
-      </div><br />
-
+       <div style="clear:both;"></div> 
     </div>
   </div>
 

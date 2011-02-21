@@ -15,28 +15,25 @@ body { background: #b7e0e4; font-family: "Georgia" , Arial, Helvetica, sans-seri
 #content_header{
 display: table; width:auto; margin: 0px auto;
 }
-
-
 #left_right_span{
-margin:0px auto;
-height:329px;
-background-image:url('/images/koziolkowo/zp.png');
-background-repeat:repeat-x;
+  margin:0px auto;
+  height:329px;
+  background-image:url('/images/koziolkowo/zp.png');
+  background-repeat:repeat-x;
 }
 #ban{
-margin:0px auto; 
-height:329px; 
-width: 893px;
-background-image:url('/images/koziolkowo/ban.png');
-background-repeat:no-repeat;
+  margin:0px auto; 
+  height:329px; 
+  width: 893px;
+  background-image:url('/images/koziolkowo/ban.png');
+  background-repeat:no-repeat;
 }
 
 #content_box{
-/* width: 880px; */
-width: auto;
-margin: -15px auto 3px auto;
-background-image:url('/images/koziolkowo/p_element.png');
-background-repeat:repeat;
+  width: auto;
+  margin: -15px auto 3px auto;
+  background-image:url('/images/koziolkowo/p_element.png');
+  background-repeat:repeat;
 }
 
 /*menu*/
@@ -69,86 +66,41 @@ background-repeat:repeat;
 	text-decoration: none;
 }
 #dol_tla {
-float:left;
-display:block;
-width: 295px;
-height: 14px;
+  float:left;
+  display:block;
+  width: 295px;
+  height: 14px;
   background-image:url('/images/koziolkowo/dol_tla.png');
   background-repeat:none;
 }
-/*
-#menu{
-  width:294px;
-  display:inline;
-  float:left;
-  text-align:right;
-}
-
-#menu ul, ul li {
-	display: block;
-	list-style: none;
-}
-
-#menu ul {
-	width: 294px;
-  height: 25px;
-
-}
-
-#menu ul li {
-  height: 24px;
-  width: 190px;
-}
-
-#menu ul a:link, ul a:visited{
-  padding: 0px 5px 0px 0px;
-  height: 24px;
-	width: 290px;
-	display: block;
-	text-decoration: none;
-	color: black;
-  background-image:url('/images/koziolkowo/tlo_pod_menu.png');
-  background-repeat:repeat-y;
-}
-#menu ul a:hover {
-  height: 24px;
-	width: 290px;
-  background-image:url('/images/koziolkowo/tlo_pod_menu_2.png');
-  background-repeat:repeat-y;
-}
-*/
-
-/*
-#menu{
-width:294px;
-display:inline;
-float:left;
-background-image:url('/images/koziolkowo/tlo_pod_menu.png');
-background-repeat:repeat-y;
-}
-*/
+  
 /* end menu */
 #content{
   width: 608px;
   display:inline;
   float:left;
-  background-image:url('/images/koziolkowo/content_tlo.png');
-  background-repeat:repeat-y;
 }
 #content_data{
-  padding: 25px;
+  padding: 25px 0px 0px 25px;
+  background-image:url('/images/koziolkowo/content_tlo.png');
+  background-repeat:repeat-y;
+
 }
 #content_inside{
   width: 905px;
   margin: 0px auto;
 }
 #content_footer{
-  margin: 0px 0px 0px 294px;
+  float:right;
+  margin: 0px -2px 0px 0px;
   width: 610px;
   height: 80px;
   background-image:url('/images/koziolkowo/content_footer.png');
   background-repeat:none;
 }
+
+
+
 #content_marker{
   margin: 20px 30px 0px 0px;
   display:inline;
@@ -206,24 +158,24 @@ background-image:url('/images/koziolkowo/article_spacer.png');
 background-repeat:none;
 }
 #read_more a{
-display:inline;
-float:right;
-color: #019b8c;
-text-decoration:none;
+  margin: 0px 60px 0px 0px;
+  display:inline;
+  float:right;
+  color: #019b8c;
+  text-decoration:none;
 }
 #read_more a:hover{
-color: #2ca2ec;
-text-decoration:none;
+  color: #2ca2ec;
+  text-decoration:none;
 }
 #go_back a{
-display:inline;
-float:left;
-color: #019b8c;
-text-decoration:none;
+  float:left;
+  color: #019b8c;
+  text-decoration:none;
 }
 #go_back a:hover{
-color: #2ca2ec;
-text-decoration:none;
+  color: #2ca2ec;
+  text-decoration:none;
 }
 /* end articles */
 

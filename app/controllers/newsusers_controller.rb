@@ -1,7 +1,14 @@
 class NewsusersController < ApplicationController
 
+  
+  def new
+        @menu = Article.show_menu_list
+        @newsuser = Newsuser.new
+
+  end
+  
   def create
-    expire_index
+#    expire_index
     @newsuser = Newsuser.new(params[:newsuser])
     if @newsuser.save
       redirect_to root_path, :notice => "Mail zostal poprawnie zapisany"
@@ -9,6 +16,8 @@ class NewsusersController < ApplicationController
       redirect_to root_path, :notice => "Mail nie zostal zapisany"
     end
   end
+  
+  
   def show
 #    return render :text => "params #{params[:id].to_yaml}"
     @newsuser = Newsuser.find_by_email(params[:id])

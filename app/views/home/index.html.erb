@@ -1,17 +1,13 @@
-<%= form_for @newsuser do |f| %>
-  <%= f.text_field :email %>
-  <%= f.submit "Newsletter"%>
-<% end %>
 
-<%= @current_user.nil?%>
-  <% if current_user %>
-    <%= link_to "Logout", logout_path %>
-  <% else %>
-    <%= link_to "Register", register_path %> |
-    <%= link_to "Login", login_path %>
-  <% end %>
+<%# @current_user.nil?%>
+<%# if current_user %>
+    <%#= link_to "Logout", logout_path %>
+  <%# else %>
+    <%#= link_to "Register", register_path %> 
+    <%#= link_to "Login", login_path %>
+<%# end %>
 
-  <% @articles.each do |article| %>
+<% @articles.each do |article| %>
   <p>
     <% if article.first? %>
     <div id="first_article_title">
@@ -28,5 +24,5 @@
     </div><br />
   </p>
   <div id="article_spacer"></div>
-  <% end %>
+<% end %>
   

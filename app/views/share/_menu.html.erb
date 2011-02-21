@@ -1,3 +1,8 @@
+<% 
+col1 = %w(#fe003c #ff3b44 #ff4a1d #fe7400 #d6aa00 #b0c000 #74c500 #008e0a #006648 #00c58b #00b1c7 #0087bd #00528c #0046d5 #786aff #7e00d6 #bf00d6 #d60097 #ff0090 #df1600)
+col2 = %w(#df1600 #fe003c #ff3b44 #ff4a1d #fe7400 #d6aa00 #b0c000 #74c500 #008e0a #006648 #00c58b #00b1c7 #0087bd #00528c #0046d5 #786aff #7e00d6 #bf00d6 #d60097 #ff0090)
+%>
+<% @colors = {"#df1600" => "fe003c", "#fe003c" => "#ff3b44" }%>
 <% if @menu %>
   <ul>
     <li>
@@ -15,6 +20,4 @@
       <p><%= link_to("Kontakt", new_contact_path) %></p>
     </li>
   </ul>
-<% else %>
-<br />
 <% end %>

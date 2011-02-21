@@ -1,8 +1,8 @@
 class NewsusersController < ApplicationController
 
   def new
-        @menu = Article.show_menu_list
-        @newsuser = Newsuser.new
+    @menu = Article.show_menu_list
+    @newsuser = Newsuser.new
   end
   
   def create
@@ -10,7 +10,7 @@ class NewsusersController < ApplicationController
     if @newsuser.save
       redirect_to root_path, :notice => t("newsletter.mail_success")
     else
-      redirect_to root_path, :notice => t("newsletter.mail_save_fail")
+      redirect_to new_newsuser_path, :notice => t("newsletter.mail_save_fail")
     end
   end
   

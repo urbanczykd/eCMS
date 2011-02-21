@@ -1,3 +1,4 @@
+<i>Kontakt</i><br /><br />
 <%= form_tag contacts_path, :url => {:action => :create, :controller => :contact}, :method => :post do  %>
 <p>
   Tytuł:<br />
@@ -12,6 +13,6 @@
   <%= text_field_tag 'contact[sender_email]' %><br />
 </p>
 <p>
-<%= submit_tag "Wyslij" %>
+<%= submit_tag t("app.send") %>
 </p>
 <% end %>

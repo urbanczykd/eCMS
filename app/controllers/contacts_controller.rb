@@ -15,7 +15,6 @@ class ContactsController < ApplicationController
     elsif ( (params[:contact][:sender_email] =~ /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i) == nil)  
       redirect_to new_contact_path, :notice => t("contact.valid_sender_fail")
     else  
-      return render :text => "tak niby jest wszystko okej"
           if @contact.save(params[:contact])
             redirect_to root_path, :notice => t("contact.message_success")      
           else

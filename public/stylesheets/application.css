@@ -13,7 +13,7 @@ body { background: #b7e0e4; font-family: "Georgia" , Arial, Helvetica, sans-seri
 
 /* start */
 #content_header{
-display: table; width:auto; margin: 0px auto;
+  display: table; width:auto; margin: 0px auto;
 }
 #left_right_span{
   margin:0px auto;
@@ -112,50 +112,49 @@ display: table; width:auto; margin: 0px auto;
 }
 
 #footer {
-width: auto;
-height: 61px;
-background-image:url('/images/koziolkowo/footer_background.png');
-background-repeat:repeat-x;
+  width: auto;
+  height: 61px;
+  background-image:url('/images/koziolkowo/footer_background.png');
+  background-repeat:repeat-x;
 }
 #footer_content{
-margin: 0px auto;
-padding: 20px 0px 0px 0px;
-width: 894px;
-height: 41px;
+  margin: 0px auto;
+  padding: 20px 0px 0px 0px;
+  width: 894px;
+  height: 41px;
 }
 #loga{
-margin: -12px 0px 0px 0px;
-display:inline;
-float:right;
-width: 521px;
-height: 43px;
-background-image:url('/images/koziolkowo/loga.png');
-background-repeat:none;
-
+  margin: -12px 0px 0px 0px;
+  display:inline;
+  float:right;
+  width: 521px;
+  height: 43px;
+  background-image:url('/images/koziolkowo/loga.png');
+  background-repeat:none;
 }
 /* articles*/
 #first_article_title{
-width: 547px;
-height: 37px;
-background-image:url('/images/koziolkowo/title_content_marker.png');
-background-repeat:none;
+  width: 547px;
+  height: 37px;
+  background-image:url('/images/koziolkowo/title_content_marker.png');
+  background-repeat:none;
 }
 #first_article_title p{
-margin: 0px 0px 0px 40px;
-color: #db1500;
-line-height: 40px;
-font-size: x-large;
+  margin: 0px 0px 0px 40px;
+  color: #db1500;
+  line-height: 40px;
+  font-size: x-large;
 }
 #article_title p{
-color: #008ac1;
-line-height: 40px;
-font-size: large;
+  color: #008ac1;
+  line-height: 40px;
+  font-size: large;
 }
 #article_spacer{
-width: 533px;
-height: 1px;
-background-image:url('/images/koziolkowo/article_spacer.png');
-background-repeat:none;
+  width: 533px;
+  height: 1px;
+  background-image:url('/images/koziolkowo/article_spacer.png');
+  background-repeat:none;
 }
 #read_more a{
   margin: 0px 60px 0px 0px;
@@ -205,46 +204,12 @@ background-repeat:none;
 
 /* end */
 
-
-
-
-
-
 /* admin login */
-#admin_login{margin: 20px auto; 
-width: 400px; 
-border: 1px solid black; 
-padding: 10px;border-radius: 20px;-moz-border-radius: 5px;
-background-color:#BFD6FF;}
+#admin_login{
+  margin: 20px auto; 
+  width: 400px; 
+  border: 1px solid black; 
+  padding: 10px;border-radius: 20px;-moz-border-radius: 5px;
+  background-color:#BFD6FF;
+}
 /* end admin login */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -9,5 +9,8 @@ pl:
     message_fail: "Wiadomość nie została poprawnie wysłana, proszę o kontakt z administratorem."
   newsletter:
     mail_success: "Mail został poprawnie wysłany."
-    mail_save_fail: "Mail nie został poprawnie zapisany."
+    mail_save_fail: "Mail nie został zapisany, nie prawidłowy e-mail."
     mail_delete: "Mail poprawnie usunięty z bazy."
+    mail_error: "Wystąpił nie znany błąd, proszę o kontakt z administratorem."
+  app: 
+    send: "Wyślij"

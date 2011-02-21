@@ -1,15 +1,11 @@
 class ContactMailer < ActionMailer::Base
 
-  def contact_mailer(email, body, title)
+  def con_mailer(email, body, title)
     @app_config = YAML::load(File.open("#{RAILS_ROOT.to_s}/config/config.yml"))
     @email_from = email
-    p "-----------------------------------------------------"
-    p @email_from
-    p @mail_title
-    p "-----------------------------------------------------"
     @mail_body = body
     @mail_title = title
-    mail(:to => @app_config["contact"]["user_name"], :subject => "#{@mail_title}", :from => @email_from)
+    mail(:to => @email_from, :subject => "#{@mail_title}", :from => @email_from, :content_type => 'text/html').deliver
   end
   
 end

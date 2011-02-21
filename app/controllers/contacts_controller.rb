@@ -7,11 +7,10 @@ class ContactsController < ApplicationController
   def create
     @contact = Contact.new
     if @contact.save(params[:contact])
-      return render :text => "jest wszystko ok!"
+      redirect_to root_path, :notice => "Wiadomosc zostala pomyslnie wyslana"      
     else
       return render :text => "cos poszlo nie tak!"
     end
-    return render :text => "params #{params[:contact].to_yaml}"
   end
 
 end

@@ -11,8 +11,7 @@ class Contact
     else
       #dopisać adres odbioru przez użytwkownika cms'a
       @app_config = YAML::load(File.open("#{RAILS_ROOT.to_s}/config/config.yml"))
-      ContactMailer.contact_mailer(@app_config["contact"]["user_name"], contact[:message], contact[:title]).deliver
-      return true
+      ContactMailer.con_mailer(@app_config["contact"]["user_name"], contact, "Wiadomosc z strony")
     end
   end
 

@@ -7,12 +7,12 @@ mailer: !map:ActiveSupport::HashWithIndifferentAccess
   port: "587"
   domain: gmail.com
   user_name: urbanczykd@gmail.com
-  password: xxxx
+  password: xxx
   authentication: plain
 contact: !map:ActiveSupport::HashWithIndifferentAccess 
   adress: smtp.gmail.com
   port: "587"
   domain: gmail.com
   user_name: urbanczykd@gmail.com
-  password: xxxx
+  password: xxx
   sendto: urbanczykd@gmail.com
